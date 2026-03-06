@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDO SIM 1 — Ant Group | CXO Simulabs</title>
+<meta name="description" content="Master data and AI strategy through Ant Group's pivotal decisions. A CDO Track simulation by CXO Simulabs.">
+<link rel="canonical" href="https://mohansimham.github.io/CDO-SIM-1-AntGroup/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CDO SIM 1 — Ant Group | CXO Simulabs">
+<meta property="og:description" content="Master data and AI strategy through Ant Group's pivotal decisions. Test your data strategy instincts through 10 real scenarios.">
+<meta property="og:url" content="https://mohansimham.github.io/CDO-SIM-1-AntGroup/">
+<meta property="og:site_name" content="CXO Simulabs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CDO SIM 1 — Ant Group | CXO Simulabs">
+<meta name="twitter:description" content="Master data and AI strategy through Ant Group's pivotal decisions. Test your data strategy instincts through 10 real scenarios.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CDO SIM 1 — Ant Group","url":"https://mohansimham.github.io/CDO-SIM-1-AntGroup/","description":"Master data and AI strategy through Ant Group's pivotal decisions. A CDO Track simulation by CXO Simulabs.","applicationCategory":"Education","provider":{"@type":"Organization","name":"CXO Simulabs","url":"https://www.cxosimulabs.com"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4J0M6TE3E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z4J0M6TE3E');</script>
+<style>
+:root {
+  --navy:#1a1a2e; --navy-mid:#16213e; --red:#e23744;
+  --accent:#2B6CB0; --accent-light:#e8f0f8;
+  --white:#fff; --light:#f7f7f9; --border:#e5e7eb;
+  --text:#1f2937; --muted:#6b7280;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--light);color:var(--text);line-height:1.6;}
+.phase{display:none;}
+.phase.active{display:block;}
+
+/* NAV */
+.nav{background:var(--navy);padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-logo{color:#fff;font-weight:800;font-size:1.1em;letter-spacing:.5px;}
+.nav-logo span{color:var(--red);}
+.nav-track{background:rgba(43,108,176,.15);border:1px solid rgba(43,108,176,.3);color:#5a8fc0;padding:4px 12px;border-radius:20px;font-size:.75em;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.nav-sims{display:flex;gap:4px;}
+.nav-sim{color:#778;text-decoration:none;font-size:.78em;padding:4px 10px;border-radius:6px;transition:all .2s;}
+.nav-sim:hover{color:#fff;background:rgba(255,255,255,.08);}
+.nav-sim.current{color:var(--accent);font-weight:600;}
+
+/* HERO BAND */
+.sim-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:48px 32px 40px;text-align:center;}
+.sim-band .eyebrow{display:inline-block;background:rgba(43,108,176,.15);border:1px solid rgba(43,108,176,.35);color:#5a8fc0;padding:5px 16px;border-radius:20px;font-size:.75em;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+.sim-band h1{color:#fff;font-size:2em;font-weight:900;margin-bottom:8px;}
+.sim-band p{color:#778899;font-size:1em;max-width:520px;margin:0 auto;}
+
+/* CARD */
+.card{background:var(--white);border-radius:14px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);max-width:620px;margin:0 auto;}
+.center-wrap{padding:40px 24px;}
+
+/* FORM */
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:.85em;font-weight:600;color:var(--text);margin-bottom:6px;}
+.form-group input{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:8px;font-size:.95em;font-family:'Inter',sans-serif;transition:border-color .2s;outline:none;}
+.form-group input:focus{border-color:var(--accent);}
+.form-note{font-size:.8em;color:var(--muted);margin-top:8px;}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95em;cursor:pointer;border:none;transition:all .2s;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--accent);color:#fff;width:100%;}
+.btn-primary:hover{background:#1e5a9a;transform:translateY(-1px);}
+.btn-outline{background:transparent;border:2px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.btn-navy{background:var(--navy);color:#fff;width:100%;}
+.btn-navy:hover{background:var(--navy-mid);}
+.error-msg{color:#dc2626;font-size:.82em;margin-top:8px;display:none;}
+.success-msg{color:#059669;font-size:.82em;margin-top:8px;display:none;}
+
+/* OTP */
+.otp-input{letter-spacing:8px;font-size:1.4em;text-align:center;font-weight:700;}
+.otp-timer{font-size:.8em;color:var(--muted);text-align:center;margin-top:8px;}
+.resend-link{color:var(--accent);cursor:pointer;text-decoration:underline;}
+
+/* INTRO */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.intro-card{background:var(--light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);}
+.intro-card h4{font-size:.88em;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.intro-card p{font-size:.82em;color:var(--muted);}
+.attempt-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent-light);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:.82em;font-weight:700;margin-bottom:20px;}
+
+/* QUESTIONS */
+.q-wrap{max-width:760px;margin:0 auto;padding:32px 24px;}
+.progress-bar-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:14px 32px;}
+.progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;max-width:760px;margin-left:auto;margin-right:auto;}
+.progress-label{font-size:.82em;font-weight:600;color:var(--muted);}
+.progress-track{height:5px;background:#e5e7eb;border-radius:3px;max-width:760px;margin:0 auto;}
+.progress-fill{height:5px;background:var(--accent);border-radius:3px;transition:width .4s ease;}
+.scenario-box{background:var(--white);border-radius:12px;padding:28px;margin-bottom:24px;border-left:4px solid var(--accent);}
+.scenario-label{font-size:.72em;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:10px;}
+.scenario-text{font-size:.93em;color:#374151;line-height:1.75;white-space:pre-line;}
+.scenario-text strong{display:block;color:var(--navy);font-weight:700;margin-top:14px;margin-bottom:4px;font-size:.95em;}
+.q-text{font-size:1.05em;font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;}
+.options{display:flex;flex-direction:column;gap:12px;}
+.option{background:var(--white);border:2px solid var(--border);border-radius:10px;padding:16px 18px;cursor:pointer;transition:all .2s;font-size:.93em;line-height:1.5;}
+.option:hover{border-color:var(--accent);background:var(--accent-light);}
+.option.locked{pointer-events:none;cursor:default;}
+.feedback-box{background:#f8fafc;border-radius:10px;padding:20px;margin-top:20px;border-left:3px solid var(--navy);font-size:.9em;color:#374151;line-height:1.7;}
+.feedback-box .fb-label{font-weight:700;color:var(--navy);margin-bottom:6px;font-size:.85em;text-transform:uppercase;letter-spacing:.5px;}
+.next-btn-wrap{margin-top:24px;text-align:right;}
+
+/* RESULTS */
+.results-wrap{max-width:800px;margin:0 auto;padding:40px 24px;}
+.score-ring-wrap{text-align:center;margin:24px 0;}
+.score-ring{position:relative;display:inline-block;}
+.score-ring canvas{display:block;}
+.score-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.score-num{font-size:2.4em;font-weight:900;color:var(--navy);}
+.score-pct{font-size:.85em;color:var(--muted);font-weight:600;}
+.tier-badge{display:inline-block;padding:8px 24px;border-radius:20px;font-weight:700;font-size:.95em;margin:12px 0;}
+.tier-mastery{background:#dcfce7;color:#166534;}
+.tier-proficiency{background:#dbeafe;color:#1e40af;}
+.tier-competency{background:#fef9c3;color:#854d0e;}
+.tier-foundational{background:#fee2e2;color:#991b1b;}
+.results-summary{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;}
+.results-summary h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:16px;}
+.q-result-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.88em;}
+.q-result-row:last-child{border-bottom:none;}
+.q-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.dot-high{background:#059669;}
+.dot-mid{background:#f59e0b;}
+.dot-low{background:#dc2626;}
+.cert-section{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;text-align:center;}
+.cert-section h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:16px;}
+#certCanvas{border-radius:8px;max-width:100%;box-shadow:0 4px 20px rgba(0,0,0,.1);}
+.cert-buttons{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap;}
+.cert-buttons .btn{width:auto;}
+
+/* HUB NAV */
+.hub-section{background:var(--navy);padding:60px 24px;}
+.hub-inner{max-width:800px;margin:0 auto;}
+.hub-section h3{color:#fff;font-size:1.2em;font-weight:700;margin-bottom:6px;}
+.hub-section p{color:#778899;font-size:.9em;margin-bottom:28px;}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+.hub-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:18px;text-decoration:none;transition:all .2s;display:block;}
+.hub-card:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);transform:translateY(-2px);}
+.hub-card.current-sim{border-color:rgba(43,108,176,.5);background:rgba(43,108,176,.08);}
+.hub-card .hw{font-size:.72em;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.hub-card .hco{color:#fff;font-weight:700;font-size:.95em;}
+.hub-card .htopic{color:#556677;font-size:.78em;margin-top:4px;}
+.hub-card .hstatus{font-size:.72em;margin-top:8px;font-weight:600;}
+.status-done{color:#4ade80;}
+.status-available{color:var(--accent);}
+.status-locked{color:#445566;}
+
+/* ATTEMPT 2 PROMPT */
+.attempt2-wrap{background:var(--white);border-radius:12px;padding:28px;margin:20px 0;text-align:center;border:2px solid var(--accent);}
+.attempt2-wrap h3{color:var(--navy);font-weight:800;font-size:1.1em;margin-bottom:8px;}
+.attempt2-wrap p{color:var(--muted);font-size:.9em;margin-bottom:20px;}
+
+/* BLOCKED */
+.blocked-wrap{text-align:center;padding:60px 24px;max-width:500px;margin:0 auto;}
+.blocked-icon{font-size:3em;margin-bottom:16px;}
+.blocked-wrap h2{color:var(--navy);font-weight:800;margin-bottom:10px;}
+.blocked-wrap p{color:var(--muted);font-size:.95em;margin-bottom:24px;}
+
+/* CUMULATIVE FEEDBACK */
+.cumulative-card{margin:20px 0;}
+.cumulative-card h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.comp-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.comp-label{width:170px;font-size:.78em;font-weight:600;color:var(--text);flex-shrink:0;}
+.comp-track{flex:1;height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden;}
+.comp-fill{height:6px;border-radius:3px;transition:width .6s ease;}
+.comp-pct{width:36px;font-size:.78em;font-weight:700;color:var(--muted);text-align:right;}
+.insight-box{margin-top:18px;background:var(--light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);}
+.insight-label{font-size:.72em;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:8px;}
+.insight-text{font-size:.9em;color:#374151;line-height:1.75;}
+.strengths-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.strength-tag{background:rgba(5,150,105,.1);border:1px solid rgba(5,150,105,.25);color:#065f46;padding:4px 10px;border-radius:12px;font-size:.75em;font-weight:600;}
+.gap-tag{background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.2);color:#991b1b;padding:4px 10px;border-radius:12px;font-size:.75em;font-weight:600;}
+
+/* NEXT SIM PROMO */
+.next-sim-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:12px;padding:20px 24px;margin:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.next-sim-banner h4{color:#fff;font-size:1em;font-weight:700;margin-bottom:4px;}
+.next-sim-banner p{color:#778899;font-size:.85em;}
+.btn-gold{background:linear-gradient(135deg,#c9a227,#e8c84a);color:#1a1a2e;font-weight:700;padding:10px 24px;border-radius:8px;border:none;cursor:pointer;font-size:.9em;text-decoration:none;display:inline-block;}
+.btn-gold:hover{opacity:.9;transform:translateY(-1px);}
+
+/* LEARN CARDS */
+.learn-wrap{max-width:620px;margin:0 auto;padding:32px 24px;}
+.learn-card{background:var(--white);border-radius:14px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);display:none;}
+.learn-card.active{display:block;}
+.learn-card .learn-icon{font-size:2.4em;margin-bottom:16px;}
+.learn-card h3{font-size:1.15em;font-weight:800;color:var(--navy);margin-bottom:6px;}
+.learn-card .learn-subtitle{font-size:.85em;color:var(--accent);font-weight:600;margin-bottom:16px;}
+.learn-card p{font-size:.92em;color:#374151;line-height:1.75;margin-bottom:14px;}
+.learn-card .learn-apply{background:var(--accent-light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);margin-top:16px;}
+.learn-card .learn-apply h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.learn-card .learn-apply p{font-size:.88em;color:#374151;margin-bottom:0;}
+.learn-card .learn-example{background:var(--light);border-radius:10px;padding:16px;margin-top:14px;}
+.learn-card .learn-example h4{font-size:.82em;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.learn-card .learn-example p{font-size:.85em;color:var(--muted);margin-bottom:0;font-style:italic;}
+.learn-card .learn-framework{background:#1a1a2e;border-radius:10px;padding:18px 20px;margin-top:14px;border-left:3px solid var(--accent);}
+.learn-card .learn-framework h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.learn-card .learn-framework ol{list-style:none;padding:0;margin:0;counter-reset:fw;}
+.learn-card .learn-framework ol li{counter-increment:fw;font-size:.84em;color:rgba(255,255,255,.75);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5;}
+.learn-card .learn-framework ol li:last-child{border-bottom:none;}
+.learn-card .learn-framework ol li::before{content:counter(fw) ". ";color:var(--accent);font-weight:700;}
+.learn-card .learn-framework ol li span{color:rgba(255,255,255,.4);font-size:.9em;}
+.learn-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
+.learn-dots{display:flex;gap:8px;}
+.learn-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .2s;}
+.learn-dot.active{background:var(--accent);}
+.learn-counter{font-size:.82em;color:var(--muted);font-weight:600;}
+
+/* SOURCES & DISCLAIMER */
+.sources-section{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;}
+.sources-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.sources-toggle h3{font-size:1em;font-weight:700;color:var(--navy);margin:0;}
+.sources-toggle .toggle-icon{font-size:1.2em;color:var(--muted);transition:transform .2s;}
+.sources-toggle .toggle-icon.open{transform:rotate(180deg);}
+.sources-content{display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+.sources-content.open{display:block;}
+.sources-content ul{list-style:none;padding:0;}
+.sources-content li{font-size:.85em;color:#374151;padding:6px 0;border-bottom:1px solid #f0f0f0;line-height:1.6;}
+.sources-content li:last-child{border-bottom:none;}
+.sources-content li a{color:var(--accent);text-decoration:none;}
+.sources-content li a:hover{text-decoration:underline;}
+.sources-content .disclaimer-text{font-size:.82em;color:var(--muted);line-height:1.7;margin-top:14px;padding:14px;background:var(--light);border-radius:8px;}
+
+/* FOOTER */
+footer{background:#0d1117;color:#445566;text-align:center;padding:24px;font-size:.8em;}
+footer a{color:#556677;text-decoration:none;}
+
+@media(max-width:600px){
+  .nav-sims{display:none;}
+  .intro-grid{grid-template-columns:1fr;}
+  .sim-band h1{font-size:1.6em;}
+  .cert-buttons{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo" id="nav-logo" onclick="founderTap()">CXO <span>Simulabs</span></div>
+  <div class="nav-track">CDO Track</div>
+  <div class="nav-sims">
+    <a href="#" class="nav-sim current">SIM 1</a>
+    <a href="https://mohansimham.github.io/CDO-SIM-2-Amazon/" class="nav-sim">SIM 2</a>
+  </div>
+</nav>
+
+<!-- PHASE: BLOCKED -->
+<div id="phase-blocked" class="phase">
+  <div class="sim-band"><div class="eyebrow">CDO Simulation 1 · Ant Group</div><h1>Data & AI Strategy — Warm Up</h1></div>
+  <div class="center-wrap">
+    <div class="blocked-wrap">
+      <div class="blocked-icon">🔒</div>
+      <h2>Both Attempts Used</h2>
+      <p>You've completed both attempts for this simulation. Each simulation allows 2 attempts to give you a chance to improve your score.</p>
+      <p style="margin-top:16px;color:var(--accent);font-weight:600;">Ready for your next challenge?</p>
+      <div style="margin-top:24px;">
+        <a href="https://mohansimham.github.io/CDO-SIM-2-Amazon/" class="btn btn-navy" style="display:inline-block;text-decoration:none;width:auto;">Try SIM 2 — Amazon →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: EMAIL GATE -->
+<div id="phase-email" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CDO Simulation 1 · Ant Group</div>
+    <h1>Data & AI Strategy — Warm Up</h1>
+    <p>10 pivotal moments. Real data strategy decisions. How would you have built it?</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <h2 style="font-size:1.2em;font-weight:800;color:var(--navy);margin-bottom:6px;">Let's get started</h2>
+      <p style="font-size:.88em;color:var(--muted);margin-bottom:24px;">We'll send your personalised certificate to your email when you complete the simulation.</p>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="input-name" placeholder="First and last name" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="input-email" placeholder="your@email.com" autocomplete="email">
+        <div class="form-note">Used to send your certificate and improve your experience. No spam.</div>
+      </div>
+      <div id="email-error" class="error-msg">Please enter a valid name and email address.</div>
+      <button class="btn btn-primary" onclick="sendOTP()" id="send-otp-btn" style="margin-top:8px;">Send Verification Code →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: OTP -->
+<div id="phase-otp" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CDO Simulation 1 · Ant Group</div>
+    <h1>Check Your Email</h1>
+    <p>Enter the 6-digit code we just sent you.</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <h2 style="font-size:1.1em;font-weight:800;color:var(--navy);margin-bottom:6px;">Verify your email</h2>
+      <p style="font-size:.88em;color:var(--muted);margin-bottom:24px;">Code sent to <strong id="otp-email-display"></strong>. Expires in <span id="otp-timer">10:00</span>.</p>
+      <div class="form-group">
+        <label>Verification Code</label>
+        <input type="text" id="input-otp" class="otp-input" placeholder="000000" maxlength="6" inputmode="numeric">
+      </div>
+      <div id="otp-error" class="error-msg">Incorrect code. Please try again.</div>
+      <div id="otp-success" class="success-msg">✓ Email verified!</div>
+      <button class="btn btn-primary" onclick="verifyOTP()" style="margin-top:8px;">Verify & Start Simulation →</button>
+      <p style="font-size:.82em;color:var(--muted);margin-top:14px;text-align:center;">Didn't get it? <span class="resend-link" onclick="resendOTP()">Resend code</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: INTRO -->
+<div id="phase-intro" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CDO Simulation 1 · Ant Group</div>
+    <h1>Data & AI Strategy — Warm Up</h1>
+    <p>You're the Chief Data Officer. 10 real scenarios. What do you decide?</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <div id="attempt-badge-display" class="attempt-badge">🎯 Attempt 1 of 2</div>
+      <h2 style="font-size:1.1em;font-weight:800;color:var(--navy);margin-bottom:10px;">What you'll be tested on</h2>
+      <div class="intro-grid">
+        <div class="intro-card"><h4>AI Operating Models</h4><p>Deciding whether to build AI into the core operating model or layer it onto existing processes — and understanding why it matters.</p></div>
+        <div class="intro-card"><h4>Data Architecture</h4><p>Designing data systems that accumulate strategic value over time rather than treating data as a byproduct of operations.</p></div>
+        <div class="intro-card"><h4>Build vs Buy</h4><p>Making the case for structural AI investment when stakeholders push for faster, cheaper bolt-on solutions.</p></div>
+        <div class="intro-card"><h4>Cost Transformation</h4><p>Using AI to fundamentally change cost structures — moving from human-scale to machine-scale economics.</p></div>
+      </div>
+      <p style="font-size:.85em;color:var(--muted);margin-bottom:20px;">10 questions · Multiple choice · Feedback after every answer · ~15 minutes</p>
+      <button class="btn btn-primary" onclick="showPhase('learn')">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: LEARN -->
+<div id="phase-learn" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CDO Simulation 1 · Ant Group</div>
+    <h1>Before You Begin</h1>
+    <p>A quick refresher on the frameworks you'll apply in this simulation.</p>
+  </div>
+  <div class="learn-wrap">
+    <div class="learn-card active" data-learn="0">
+      <div class="learn-icon">🧠</div>
+      <h3>AI Operating Models</h3>
+      <div class="learn-subtitle">AI-native from day one vs. AI bolted on later — the choice that defines everything.</div>
+      <p>An AI operating model defines how artificial intelligence is embedded into your organisation's core processes. There are two fundamentally different approaches: <strong>AI-native</strong> (AI is the operating system — every process is designed around machine intelligence from the start) and <strong>AI-layered</strong> (AI is added on top of existing human-centric processes). The difference is not just technical — it shapes your cost structure, competitive position, and organisational design. AI-native companies design processes that are impossible without AI. AI-layered companies use AI to make existing processes slightly faster or cheaper. The gap between these two approaches compounds over time.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>When designing a data &amp; AI strategy, ask: "Would this process exist without AI, or is AI the reason this process is possible?" If the answer is "it would exist without AI," you are layering. If "AI makes this possible," you are building AI-native. A fintech company that uses AI to auto-approve microloans in one second — with zero human intervention — is AI-native. A traditional bank that uses AI to flag suspicious applications for human review is AI-layered. The AI-native approach requires more upfront investment in data infrastructure and model development, but delivers exponentially better unit economics at scale.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>Consider two lending approaches: Bank A employs 10,000 loan officers who each review 20 applications per day. They add an AI pre-screening tool that filters out obvious rejections — reducing officer workload by 30%. This is AI-layered. Bank B designs an entirely automated lending pipeline: applicants submit data, AI models assess risk in real-time using hundreds of signals, loans are approved or rejected in seconds, and funds are disbursed automatically. Human reviewers only see edge cases. This is AI-native. Bank B's cost per loan decision can be 1/1000th of Bank A's — not because the AI is "better" but because the operating model is fundamentally different.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>AI Operating Model Assessment</h4>
+        <ol>
+          <li>Process Design Test <span>— Is the process designed around AI capabilities, or is AI assisting a human-designed process? AI-native processes are impossible without the AI.</span></li>
+          <li>Human Role <span>— Are humans in the loop (approving every decision), on the loop (monitoring and intervening on exceptions), or out of the loop (only designing and auditing the system)? Each level unlocks different scale economics.</span></li>
+          <li>Data Dependency <span>— Does the process generate data that makes the AI better over time? AI-native processes create virtuous cycles. AI-layered processes often don't.</span></li>
+          <li>Cost Structure <span>— Does adding customers increase costs linearly (human-dependent) or logarithmically (machine-dependent)? AI-native models show near-zero marginal cost.</span></li>
+          <li>Decision Speed <span>— Can decisions be made in milliseconds (real-time AI), minutes (AI-assisted), or days (human with AI support)? Speed determines which markets you can serve.</span></li>
+          <li>Failure Mode <span>— When the AI is wrong, what happens? AI-native systems need robust fallback mechanisms. Design for failure, not just success.</span></li>
+          <li>Competitive Moat <span>— AI-native processes compound advantages over time (more data, better models). AI-layered advantages can be replicated by competitors quickly.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">1 of 4</span>
+        <div class="learn-dots"><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="1">
+      <div class="learn-icon">🏗️</div>
+      <h3>Data Architecture for Strategic Advantage</h3>
+      <div class="learn-subtitle">Data is either a strategic asset that compounds — or a liability that costs money to store.</div>
+      <p>Strategic data architecture treats data as a compounding asset: every transaction, interaction, and decision feeds back into models that make the entire system smarter. This creates a <strong>data flywheel</strong> — more users generate more data, which improves models, which improve the product, which attracts more users. The alternative is treating data as a byproduct: collected because systems produce it, stored because regulations require it, but never systematically converted into competitive advantage. The CDO's role is to design architecture that turns the first approach into reality.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Design your data architecture around three principles: (1) <strong>Unified data layer</strong> — break down silos so insights from one business line improve another. Payment data should improve lending models, which should improve insurance pricing. (2) <strong>Real-time capability</strong> — batch processing is for reporting; real-time processing is for decision-making. If your AI needs to decide in milliseconds (fraud detection, credit approval), your architecture must support it. (3) <strong>Feature reusability</strong> — build a feature store so that ML features computed once can be reused across models. This prevents teams from duplicating work and ensures consistency.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>A fintech company operates payments, lending, insurance, and wealth management. Without strategic architecture, each division builds its own data pipeline: the payments team tracks transaction patterns, the lending team builds credit models from application data, and the insurance team analyses claims separately. With strategic architecture, all data flows into a unified platform: payment patterns reveal creditworthiness (helping lending), credit behaviour predicts insurance risk (helping insurance), and insurance claims reveal financial stress (helping lending adjust). The same user's data creates value across four business lines simultaneously — a competitive advantage no single-line competitor can match.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Data Architecture Design Framework</h4>
+        <ol>
+          <li>Data Collection Strategy <span>— What data do you collect, from where, and how? Prioritise high-signal, low-noise sources. Design systems that capture data as a natural byproduct of operations.</span></li>
+          <li>Storage &amp; Processing Layer <span>— Data lake for raw storage, data warehouse for structured analytics, streaming pipeline for real-time. Each serves a different purpose.</span></li>
+          <li>Feature Engineering Layer <span>— A centralised feature store where ML features are computed, versioned, and shared across teams. Prevents duplication and ensures consistency.</span></li>
+          <li>Cross-Business Integration <span>— How do insights from one business line flow to another? Design explicit data sharing protocols with governance controls.</span></li>
+          <li>Real-Time vs. Batch <span>— Which decisions need real-time data (fraud, pricing) and which can use batch (reporting, model training)? Over-investing in real-time is expensive; under-investing limits capability.</span></li>
+          <li>Data Quality &amp; Governance <span>— Who owns data quality? How are schemas managed? What happens when data is missing or incorrect? Poor quality in = poor decisions out.</span></li>
+          <li>Flywheel Design <span>— Map the feedback loop: data → model → product → user behaviour → more data. Every break in this loop reduces the compounding effect.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">2 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="2">
+      <div class="learn-icon">⚖️</div>
+      <h3>Build vs. Buy for AI Infrastructure</h3>
+      <div class="learn-subtitle">The decision that determines whether your AI is a commodity or a competitive weapon.</div>
+      <p>Every CDO faces this question: should we build proprietary AI systems or buy off-the-shelf solutions from vendors? The answer depends on whether AI is your <strong>core differentiator</strong> or a <strong>supporting capability</strong>. If AI is what makes your product uniquely valuable — if it is the source of your competitive moat — you must build. If AI supports a non-AI core business (e.g., using AI for internal analytics at a retail company), buying is usually faster and cheaper. The mistake most organisations make is treating this as a binary choice. The best CDOs build what differentiates and buy everything else.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Use the Strategic Differentiation Matrix: plot each AI capability on two axes — (1) How critical is this to competitive differentiation? (2) How unique are our data and requirements? High-differentiation + unique data = build. Low-differentiation + common requirements = buy. A fintech company should build its own credit scoring models (core differentiator, unique data) but buy its cloud infrastructure and monitoring tools (supporting capability, common requirements). The build path requires 3-5x more investment upfront but creates compounding advantages. The buy path is faster but gives you the same capabilities as every competitor using the same vendor.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>A digital lender considers two approaches to fraud detection. Option A: buy a commercial fraud detection API from a vendor. Cost: $0.02 per transaction, deployed in 2 weeks, accuracy: 94%. Option B: build a proprietary fraud detection system using internal transaction data. Cost: $2M upfront + 6 months development, accuracy: 97% after 12 months of training. The vendor solution works for everyone but is optimised for no one. The proprietary system learns from YOUR specific fraud patterns, YOUR user behaviour, and YOUR transaction types. After 2 years, the proprietary system catches fraud patterns the vendor has never seen — because it was trained on data the vendor doesn't have. The 3% accuracy gap translates to millions in prevented fraud annually.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Build vs. Buy Decision Framework</h4>
+        <ol>
+          <li>Differentiation Test <span>— Does this AI capability directly create competitive advantage? If competitors can buy the same thing from the same vendor, it's not a differentiator.</span></li>
+          <li>Data Uniqueness <span>— Do you have proprietary data that would make a custom model significantly better than a generic one? Unique data = build advantage.</span></li>
+          <li>Time-to-Market <span>— How urgently do you need this capability? Buying is weeks; building is months to years. Sometimes speed matters more than perfection.</span></li>
+          <li>Total Cost of Ownership <span>— Building has high upfront cost but low marginal cost at scale. Buying has low upfront cost but per-transaction fees that grow with volume.</span></li>
+          <li>Talent Availability <span>— Do you have (or can you hire) the ML engineering talent to build and maintain this? Building without talent is worse than buying.</span></li>
+          <li>Vendor Lock-in Risk <span>— How dependent would you become on the vendor? Can you switch later? Vendor lock-in on a core capability is a strategic vulnerability.</span></li>
+          <li>Evolution Speed <span>— How fast does this capability need to evolve? Internal teams can iterate daily based on your data. Vendors update on their roadmap, not yours.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">3 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="3">
+      <div class="learn-icon">📊</div>
+      <h3>Cost Transformation through AI</h3>
+      <div class="learn-subtitle">AI doesn't just reduce costs — it changes the fundamental economics of your business.</div>
+      <p>Cost transformation through AI is not about doing the same thing cheaper — it's about doing fundamentally different things that were economically impossible before. When AI reduces the cost of a loan decision from $100 to $0.10, it doesn't just save money on existing loans — it makes it economically viable to serve entirely new markets (micro-loans, underbanked populations, instant credit). This is the difference between <strong>cost reduction</strong> (10-30% savings on existing processes) and <strong>cost transformation</strong> (1000x reduction that enables new business models). The CDO who understands this difference shapes strategy, not just infrastructure.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Map every core business process and ask: "What is the current cost per decision? What would AI reduce it to? And what new markets or products would that cost level unlock?" Traditional banks can't profitably issue a $50 loan — the cost of underwriting exceeds the interest income. But if AI reduces underwriting cost to near-zero, $50 loans become profitable at scale. This isn't just a fintech insight — it applies everywhere. If AI reduces the cost of medical image analysis from $50 to $0.50, universal screening programs become viable. If AI reduces the cost of legal document review from $500/hour to $5/hour, access to justice expands. The CDO's job is to identify these transformation opportunities and quantify them.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>A fintech company's AI-powered lending model processes loan applications at approximately 1/1000th the cost of a traditional bank. A traditional bank spends roughly $100-150 per loan application (loan officer time, document processing, credit bureau checks, compliance review, approval committee). The AI-native model spends roughly $0.10 (automated data collection, real-time model scoring, automated compliance checks). This 1000x cost reduction doesn't just improve margins on existing loans — it enables an entirely new product: micro-loans as small as $10-50 for street vendors and small merchants who were previously unbanked. The addressable market expanded from millions to hundreds of millions of potential customers.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>AI Cost Transformation Assessment</h4>
+        <ol>
+          <li>Current Cost Baseline <span>— What does each core process cost today per unit (per decision, per transaction, per customer served)? You can't transform what you haven't measured.</span></li>
+          <li>AI-Enabled Cost Target <span>— What could AI reduce the per-unit cost to? Be ambitious. AI cost reductions are often 10-1000x, not 10-30%.</span></li>
+          <li>New Market Unlock <span>— At the new cost level, what markets, products, or customer segments become economically viable for the first time?</span></li>
+          <li>Scale Economics <span>— How does cost per unit change as volume increases? AI models have near-zero marginal cost — serving 1M customers costs barely more than serving 100K.</span></li>
+          <li>Quality Trade-offs <span>— Does the AI-enabled process maintain or improve quality? Cost transformation that degrades quality is just cost cutting.</span></li>
+          <li>Transition Path <span>— How do you migrate from current processes to AI-native processes? Cold turkey or gradual? Which processes transform first?</span></li>
+          <li>Competitive Impact <span>— If you achieve this cost transformation and competitors don't, what happens to the market? First-mover advantage in cost transformation can be decisive.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">4 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="startSim()">Start Simulation →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- PHASE: QUESTIONS -->
+<div id="phase-questions" class="phase">
+  <div class="progress-bar-wrap">
+    <div class="progress-top">
+      <span class="progress-label" id="q-progress-label">Question 1 of 10</span>
+      <span class="progress-label" id="q-score-label">Score: 0</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <div class="q-wrap">
+    <div class="scenario-box">
+      <div class="scenario-label">Scenario</div>
+      <div class="scenario-text" id="q-scenario"></div>
+    </div>
+    <div class="q-text" id="q-question"></div>
+    <div class="options" id="q-options"></div>
+    <div class="feedback-box" id="q-feedback" style="display:none;">
+      <div class="fb-label">Expert Analysis</div>
+      <div id="q-feedback-text"></div>
+    </div>
+    <div class="next-btn-wrap">
+      <button class="btn btn-navy" id="next-btn" onclick="nextQuestion()" style="display:none;">Next Question →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: RESULTS -->
+<div id="phase-results" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">Simulation Complete</div>
+    <h1 id="results-heading">Your Results</h1>
+  </div>
+  <div class="results-wrap">
+
+    <div class="card" style="text-align:center;margin-bottom:20px;">
+      <div class="score-ring-wrap">
+        <div class="score-ring">
+          <canvas id="scoreRingCanvas" width="160" height="160"></canvas>
+          <div class="score-center">
+            <div class="score-num" id="result-pct">0%</div>
+            <div class="score-pct" id="result-score-label">0 / 0</div>
+          </div>
+        </div>
+      </div>
+      <div class="tier-badge" id="tier-badge">Strategic Mastery</div>
+      <p id="tier-feedback" style="color:var(--muted);font-size:.9em;max-width:480px;margin:0 auto;"></p>
+    </div>
+
+    <!-- Next Sim Banner (prominent) -->
+    <div class="next-sim-banner" id="next-sim-banner" style="display:none;">
+      <div>
+        <h4>Up next: SIM 2 — Amazon</h4>
+        <p>Data & AI Strategy · Data Flywheel · Build vs Buy · 10 new decisions</p>
+      </div>
+      <a href="https://mohansimham.github.io/CDO-SIM-2-Amazon/" class="btn-gold">Start SIM 2 →</a>
+    </div>
+
+    <div class="results-summary">
+      <h3>Decision Analysis — Expert Feedback on Every Choice</h3>
+      <div id="q-breakdown"></div>
+    </div>
+
+    <!-- Cumulative Feedback -->
+    <div class="card cumulative-card" id="cumulative-section">
+      <h3>Your CDO Profile</h3>
+      <p style="font-size:.82em;color:var(--muted);margin-bottom:20px;">Based on your decision patterns across all 10 scenarios</p>
+      <div id="competency-bars"></div>
+      <div class="insight-box">
+        <div class="insight-label">Strategic Insight</div>
+        <div class="insight-text" id="insight-text"></div>
+        <div style="margin-top:14px;">
+          <div style="font-size:.75em;font-weight:700;color:#059669;margin-bottom:6px;">STRENGTHS</div>
+          <div class="strengths-row" id="strength-tags"></div>
+        </div>
+        <div style="margin-top:12px;">
+          <div style="font-size:.75em;font-weight:700;color:#dc2626;margin-bottom:6px;">DEVELOP FURTHER</div>
+          <div class="strengths-row" id="gap-tags"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attempt 2 prompt (shown if attempt 1 done) -->
+    <div class="attempt2-wrap" id="attempt2-prompt" style="display:none;">
+      <h3>Try Attempt 2?</h3>
+      <p>Different questions, same competencies. Can you improve your score?</p>
+      <button class="btn btn-primary" onclick="startAttempt2()" style="width:auto;padding:12px 32px;">Start Attempt 2 →</button>
+    </div>
+
+    <div class="cert-section">
+      <h3>Your Certificate</h3>
+      <p style="font-size:.82em;color:var(--muted);margin-bottom:16px;">Download the certificate for LinkedIn or the square badge for Instagram, WhatsApp and other social media.</p>
+      <canvas id="certCanvas" width="1200" height="850"></canvas>
+      <div class="cert-buttons" style="margin-top:14px;">
+        <button class="btn btn-navy" onclick="downloadCert()" style="width:auto;">↓ Certificate (LinkedIn)</button>
+        <button class="btn btn-navy" onclick="downloadBadge()" style="width:auto;">↓ Badge (Instagram)</button>
+        <button class="btn btn-outline" onclick="shareLinkedIn()" style="width:auto;">Share LinkedIn</button>
+        <button class="btn btn-outline" onclick="shareTwitter()" style="width:auto;">Share X / Twitter</button>
+        <button class="btn btn-outline" onclick="shareWhatsApp()" style="width:auto;">Share WhatsApp</button>
+        <button class="btn btn-outline" onclick="copyLink()" style="width:auto;" id="copy-link-btn">Copy Link</button>
+      </div>
+      <!-- Hidden badge canvas -->
+      <canvas id="badgeCanvas" width="1080" height="1080" style="display:none;"></canvas>
+    </div>
+
+    <!-- Sources & Disclaimer -->
+    <div class="sources-section">
+      <div class="sources-toggle" onclick="this.querySelector('.toggle-icon').classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+        <h3>Sources & Disclaimer</h3>
+        <span class="toggle-icon">▼</span>
+      </div>
+      <div class="sources-content">
+        <ul>
+          <li>Ant Group public disclosures and corporate announcements — business model, technology strategy, and financial inclusion initiatives</li>
+          <li>Publicly available information on AI-native lending models in fintech — automated underwriting, alternative credit scoring, and micro-lending at scale</li>
+          <li>Industry analyses on data-driven financial services from McKinsey Global Institute, World Economic Forum, and Bank for International Settlements</li>
+          <li>Academic research on AI operating models, data flywheels, and cost transformation through automation — publicly available papers and working documents</li>
+          <li>Published reporting on fintech AI adoption, regulatory developments, and data governance frameworks in financial services</li>
+          <li>Data architecture and ML infrastructure literature — feature stores, real-time processing, and organisational design for AI teams</li>
+          <li>AI ethics and algorithmic fairness research — bias detection, fairness constraints, and responsible AI governance frameworks</li>
+        </ul>
+        <div class="disclaimer-text">
+          <strong>Disclaimer:</strong> CXO Simulabs is an independent educational platform. "Ant Group" and related marks are trademarks of Ant Group Co., Ltd. This simulation is not affiliated with, endorsed by, or sponsored by Ant Group Co., Ltd. or any of its subsidiaries. All scenarios are inspired by publicly available information about AI-native fintech operating models and may include dramatised or generalised elements for educational purposes. No copyrighted materials were used in the creation of this content. All dialogue is fictional and does not represent actual statements by any individual. Titles such as "CEO," "CTO," and "CDO" refer to fictional roles in educational scenarios, not actual executives. Financial figures and statistics are illustrative approximations used for educational purposes and do not represent actual company data. This is not a professional certification or accreditation.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HUB NAV -->
+  <div class="hub-section">
+    <div class="hub-inner">
+      <h3>CDO Track — All Simulations</h3>
+      <p>Each simulation tests a different set of CDO competencies. 18 simulations planned.</p>
+      <div class="hub-grid">
+        <div class="hub-card current-sim">
+          <div class="hw">SIM 1 · Current</div>
+          <div class="hco">Ant Group</div>
+          <div class="htopic">AI Operating Models · Data Architecture · Cost Transformation</div>
+          <div class="hstatus status-done">✓ Completed</div>
+        </div>
+        <a href="https://mohansimham.github.io/CDO-SIM-2-Amazon/" class="hub-card">
+          <div class="hw">SIM 2</div>
+          <div class="hco">Amazon</div>
+          <div class="htopic">Data Flywheel · Self-Reinforcing Loops · Platform Data</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <div class="hub-card" style="opacity:.4;pointer-events:none;">
+          <div class="hw">SIM 3–18</div>
+          <div class="hco">Coming Soon</div>
+          <div class="htopic">More CDO competencies across real-world cases</div>
+          <div class="hstatus status-locked">🔒 Coming soon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 CXO Simulabs · <a href="https://www.cxosimulabs.com">cxosimulabs.com</a> · <a href="https://www.cxosimulabs.com/privacy.html">Privacy</a> · <a href="https://www.cxosimulabs.com/terms.html">Terms</a></p>
+    <p style="margin-top:8px;font-size:.75em;color:#334455;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;">CXO Simulabs is an independent educational platform. "Ant Group" and related marks are trademarks of Ant Group Co., Ltd. This simulation is not affiliated with, endorsed by, or sponsored by Ant Group Co., Ltd. Scenarios are inspired by publicly available information and may include dramatised elements for educational purposes. This is not a professional certification. All dialogue is fictional and does not represent actual statements by any individual.</p>
+  </footer>
+</div>
+
+<script>
+// ─── FOUNDER MODE ─────────────────────────────────────────
+let _founderTaps=0, _founderTimer=null;
+function founderTap(){
+  _founderTaps++;
+  clearTimeout(_founderTimer);
+  _founderTimer=setTimeout(()=>_founderTaps=0,600);
+  if(_founderTaps>=3){ enterFounderMode(); _founderTaps=0; }
+}
+function enterFounderMode(){
+  Object.values(LS).forEach(k=>localStorage.removeItem(k));
+  state.name='Founder Preview';
+  state.email='founder@cxosimulabs.com';
+  state.currentAttempt=1;
+  if(!document.getElementById('founder-badge')){
+    const b=document.createElement('div');
+    b.id='founder-badge';
+    b.style.cssText='position:fixed;bottom:16px;right:16px;background:#1a1a2e;color:#fff;padding:8px 16px;border-radius:8px;font-size:.78em;font-weight:600;z-index:9999;border:1px solid rgba(226,55,68,.4);cursor:pointer;';
+    b.innerHTML='🔧 Founder Preview &nbsp;<span style="color:#e23744;" onclick="exitFounderMode()">✕ Exit</span>';
+    document.body.appendChild(b);
+  }
+  document.getElementById('attempt-badge-display').textContent='🔧 Preview Mode';
+  showPhase('intro');
+}
+function exitFounderMode(){
+  const b=document.getElementById('founder-badge');
+  if(b) b.remove();
+  location.reload();
+}
+
+// ─── COMPETENCY MAP ───────────────────────────────────────
+const COMP_MAP = [
+  {name:'AI Strategy Design'},
+  {name:'Data Architecture'},
+  {name:'Build vs Buy Decisions'},
+  {name:'Cost-Benefit Analysis'},
+  {name:'Data Governance'},
+  {name:'Stakeholder Communication'},
+  {name:'Competitive Moat Analysis'},
+  {name:'Technology Assessment'},
+  {name:'Risk Management'},
+  {name:'Organisational Design'},
+];
+
+// ─── CONFIG ───────────────────────────────────────────────
+const EJS_KEY      = 'ABWpMkWPOTsO_gQWG';
+const EJS_SERVICE  = 'service_a6x573k';
+const EJS_TEMPLATE = 'template_xt90q9j';
+emailjs.init(EJS_KEY);
+
+const LS = {
+  name:      'cxo_cdo1_name',
+  email:     'cxo_cdo1_email',
+  attempts:  'cxo_cdo1_attempts',
+  scores:    'cxo_cdo1_scores',
+};
+
+// ─── STATE ────────────────────────────────────────────────
+let state = {
+  name:'', email:'',
+  otp:'', otpExpiry:0, otpAttempts:0,
+  timerInterval:null,
+  currentAttempt:1,
+  currentQ:0,
+  answers:[],
+  totalScore:0, maxScore:0,
+};
+
+// ─── QUESTIONS ────────────────────────────────────────────
+const Q = {
+  1: [
+    {
+      scenario:`2014 — Launching a Digital Lending Platform: AI-Native or AI-Layered?\n\nA fintech company is preparing to launch a digital micro-lending service in one of the world's largest markets. The CEO has secured regulatory approval and initial funding. Hundreds of millions of potential borrowers have no traditional credit history — no credit bureau data, no bank statements, no collateral.\n\nThe CTO proposes two architectures: (A) Start with a traditional lending process — loan officers reviewing applications manually — and gradually add AI assistance over time as the company collects data. (B) Build an AI-native lending pipeline from day one — automated data collection, real-time risk scoring, instant approval/rejection with zero human intervention.\n\nOption A is faster to launch (3 months) and lower risk. Option B requires 12 months and significant upfront investment in data infrastructure and ML engineering. The board is divided.`,
+      question:`As CDO, which architecture do you recommend?`,
+      options:[
+        {text:`AI-native from day one. Design every process around machine intelligence — automated data collection, real-time risk scoring, instant decisions. Accept the longer build time because the architecture will compound advantages over time and enable unit economics that a human-dependent model can never match.`, points:10, feedback:`This is the right strategic choice. An AI-native architecture doesn't just reduce costs — it fundamentally changes what's economically possible. When your cost per loan decision is $0.10 instead of $100, you can profitably serve micro-loans as small as $10. This opens a market of hundreds of millions of underbanked customers that no human-dependent process could ever reach. The 12-month build time is an investment in a 1000x cost advantage that compounds with every loan processed. Every decision generates data that makes the next decision better — creating a flywheel that competitors starting with humans-plus-AI can never catch.`},
+        {text:`Start with human loan officers and add AI gradually. Launch in 3 months, learn from real lending operations, then automate processes one by one as the AI proves itself. This reduces risk and lets you generate revenue immediately.`, points:4, feedback:`Starting with humans is the cautious path, but it creates a dangerous trap: you'll optimise your processes, team, and culture around human-scale operations. When you later try to automate, you'll face resistance from loan officers whose jobs are at risk, processes designed around human workflows, and an architecture that treats AI as an add-on rather than the core. Companies that start human-first rarely achieve true AI-native economics — they get stuck at "AI-assisted" with 30% cost reduction instead of 1000x. The fintech companies that won this market built AI-native from the start.`},
+        {text:`Hybrid approach: launch with AI handling the initial screening and scoring, but require human approval for every loan above a minimum threshold. Gradually reduce human involvement as the models prove accurate.`, points:6, feedback:`The hybrid approach is a reasonable compromise, but it creates a bottleneck at scale. If every loan above a threshold needs human approval, your throughput is limited by the number of loan officers — defeating the purpose of AI. The approval threshold tends to drift lower slowly because humans are comfortable reviewing and reluctant to give up control. Better companies design the target state (fully automated) from day one and use the hybrid phase as a brief transition, not a permanent model. The risk: "gradually reduce human involvement" often means "never fully automate."`},
+        {text:`Buy a commercial AI lending platform from an established vendor. This gives you proven algorithms, regulatory compliance features, and faster time-to-market without building from scratch.`, points:3, feedback:`Buying a commercial platform means you're using the same algorithms as every other fintech that buys from the same vendor. In a market where competitive advantage comes from your AI's accuracy — which comes from your unique data — using commodity AI is a strategic mistake. The vendor's models are trained on generic data, not the specific patterns of your market's underbanked population. You also lose control over the most critical part of your business: the decision-making engine. When regulation changes or market conditions shift, you're dependent on the vendor's update cycle.`}
+      ],
+      competency:[0,1,7]
+    },
+    {
+      scenario:`2015 — Credit Scoring Without Traditional Data\n\nThe company has launched its AI-native lending platform, but faces a fundamental challenge: the target market of hundreds of millions of potential borrowers has virtually no traditional credit history. No credit bureau scores, no bank statements, no tax records.\n\nThe data science team proposes using alternative data sources to build credit models. Candidates include: mobile phone usage patterns, e-commerce purchase history, digital payment transaction data, social network connections, device and app usage data, and location patterns.\n\nThe Head of Risk is concerned about model accuracy with non-traditional signals. The legal team worries about data privacy. The CEO sees it as the only path to serving this underbanked market at scale.`,
+      question:`How should the CDO design the alternative data strategy for credit scoring?`,
+      options:[
+        {text:`Build a multi-dimensional scoring model using payment transaction history as the primary signal, supplemented by e-commerce behaviour and digital footprint data. Focus on signals that directly correlate with financial responsibility. Exclude social network and location data as they raise privacy concerns without proportionate predictive value.`, points:10, feedback:`This is the optimal approach. Payment transaction data is the strongest alternative credit signal because it directly reflects financial behaviour — how someone manages money is the best predictor of how they'll manage debt. E-commerce behaviour adds richness (purchase patterns, merchant diversity, spending discipline). Excluding social network and location data is wise: these signals have weak predictive power for creditworthiness, raise significant privacy and discrimination concerns, and could expose the company to regulatory risk. The best alternative credit models are built on signals with clear causal logic: "this person consistently pays their bills on time through digital channels" is defensible. "This person's social connections suggest creditworthiness" is not.`},
+        {text:`Use every available data source including social connections, device data, and location patterns to maximise model accuracy. The more signals the model has, the more accurate it will be. Privacy concerns can be managed through user consent and anonymisation.`, points:3, feedback:`More data is not always better data. Including every available signal creates several problems: (1) Social connections can encode demographic biases — if the model learns that people with certain social networks are lower risk, it may be discriminating by proxy. (2) Location data can serve as a proxy for ethnicity or income level, creating fair lending violations. (3) Device data (iPhone vs Android) correlates with income, not creditworthiness. (4) User consent doesn't eliminate ethical concerns — users may not understand what they're consenting to. The best credit models use fewer, higher-quality signals with clear causal logic rather than throwing everything at a black box.`},
+        {text:`Start with only payment transaction data and nothing else. Keep the model simple and transparent. Alternative data beyond payments is too risky from a regulatory and ethical standpoint.`, points:6, feedback:`Using only payment data is the safest approach but limits model accuracy unnecessarily. Payment data alone might not capture enough signal for users with limited transaction history. E-commerce purchase behaviour, for instance, reveals financial discipline (impulse vs planned spending, budget adherence) without the ethical concerns of social or location data. The key is adding data sources that are both predictive AND ethically defensible — not avoiding all alternative data out of caution. A model with two strong signal categories will outperform one with a single category.`},
+        {text:`Partner with mobile network operators to access call and SMS metadata as the primary credit signal. Research shows mobile usage patterns (top-up frequency, call diversity, data usage) are strong predictors of creditworthiness in emerging markets.`, points:4, feedback:`Mobile metadata has shown some predictive power in academic research, but it has significant limitations as a PRIMARY credit signal. Call patterns and SMS usage don't have a clear causal relationship with financial responsibility — they're statistical correlations that may not hold as markets evolve. There are also privacy concerns around accessing communication metadata. More importantly, this creates dependency on telecom partnerships that may be fragile. Payment transaction data, which directly reflects financial behaviour, is a stronger foundation. Mobile metadata might supplement but shouldn't be the primary signal.`}
+      ],
+      competency:[1,4,6]
+    },
+    {
+      scenario:`2015 — Build vs. Buy: The ML Infrastructure Decision\n\nThe company's AI lending platform is growing rapidly. The CTO presents the CDO with a critical infrastructure decision.\n\nThe data science team currently uses a patchwork of open-source tools for model training, deployment, and monitoring. As loan volume grows from 10,000 to 1 million applications per day, this setup is straining.\n\nTwo proposals are on the table:\n\nOption A (Buy): Adopt a commercial ML platform from a major cloud provider. Cost: $2M/year licensing. Deployment: 3 months. Features: managed model training, A/B testing, monitoring, auto-scaling.\n\nOption B (Build): Develop a proprietary ML platform tailored to the company's specific needs. Cost: $8M upfront + $3M/year maintenance. Team: 15 ML engineers for 12 months. Features: custom feature store, real-time model serving, domain-specific monitoring.`,
+      question:`What infrastructure strategy should the CDO recommend?`,
+      options:[
+        {text:`Build the proprietary ML platform. The company's competitive advantage depends on its AI models, and the infrastructure that trains, deploys, and monitors those models is strategically critical. A custom platform can be optimised for the specific requirements of real-time lending decisions in ways a generic commercial platform cannot.`, points:10, feedback:`Correct. When AI is your core differentiator, the infrastructure that supports it is strategic — not just operational. A proprietary platform enables: (1) Custom feature engineering pipelines optimised for your specific data types and lending decisions. (2) Real-time model serving with latency requirements specific to instant loan approval. (3) Domain-specific monitoring that catches model drift in credit scoring (not just generic ML metrics). (4) Tight integration with your data architecture for the feedback loop that makes models better over time. The $8M investment pays for itself when you consider that a 0.5% improvement in model accuracy across millions of daily decisions translates to tens of millions in reduced defaults annually.`},
+        {text:`Buy the commercial ML platform. The $6M cost savings in year one can be redirected to hiring more data scientists who build better models. Infrastructure is not a differentiator — the models themselves are. Don't reinvent the wheel when cloud providers have invested billions in ML infrastructure.`, points:4, feedback:`This is a common argument, but it misunderstands where the differentiation lies. Models are only as good as the infrastructure that trains, deploys, and monitors them. A commercial platform optimised for generic ML workloads will have latency, feature engineering, and monitoring limitations that generic means "adequate for nobody." The $6M savings is illusory: you'll spend more on workarounds, custom integrations, and lost accuracy from infrastructure constraints. Cloud ML platforms are excellent for companies where AI supports the business. When AI IS the business, you need infrastructure built for your specific requirements.`},
+        {text:`Start with the commercial platform for speed, then build a proprietary platform in parallel. Migrate once the custom platform is ready. This gives you both speed-to-market and long-term strategic control.`, points:6, feedback:`This sounds pragmatic but is often a trap. Building on a commercial platform means designing your models, pipelines, and monitoring around that platform's assumptions and limitations. When you later migrate to a custom platform, you'll need to re-engineer much of this work. Engineers who spent months optimising for the commercial platform's APIs will resist rebuilding. Migration projects are notoriously painful and often stall — "we'll migrate later" frequently becomes "we're stuck on the vendor." If you're going to build, commit to building from the start. The 12-month timeline is an investment, not a delay.`},
+        {text:`Use a hybrid: buy the commercial platform for model training and experimentation, but build a custom real-time serving layer for production loan decisions. This way you get the commercial platform's training tools while controlling the production-critical serving infrastructure.`, points:6, feedback:`This hybrid approach has merit — it acknowledges that not all ML infrastructure is equally strategic. Training infrastructure benefits from cloud scale, while the serving layer that makes real-time loan decisions is where latency and reliability matter most. However, splitting infrastructure creates integration complexity: models trained on one platform need to be exported and optimised for a different serving layer. Feature consistency between training and serving is critical (training-serving skew is a common ML failure mode). Over time, most companies find that the integration overhead pushes them toward building the full stack. A reasonable compromise for the first 6-12 months, but plan for full ownership.`}
+      ],
+      competency:[2,3,7]
+    },
+    {
+      scenario:`2016 — The "3-1-0" Lending Model: Removing Humans from the Loop\n\nThe AI lending platform has been operating for 18 months. The company's leadership wants to move to a fully automated "3-1-0" model: 3 minutes for the borrower to apply, 1 second for the AI to decide, 0 human intervention.\n\nCurrently, 70% of loan decisions are fully automated. The remaining 30% — larger loans, borderline cases, and first-time borrowers with thin data — still go to human reviewers. The data shows that the AI's accuracy on these edge cases is approaching human reviewer accuracy (within 0.3%).\n\nThe Head of Risk argues: "We should never fully remove humans. The reputational risk of an AI-only bad decision outweighs the cost savings." The CEO argues: "Humans are the bottleneck. We can't serve 100 million customers with human reviewers in the loop."`,
+      question:`How should the CDO approach the decision to go fully automated?`,
+      options:[
+        {text:`Move to full automation with a robust safety architecture: real-time anomaly detection, automatic circuit breakers that pause lending if model performance degrades, regular bias audits, and a small expert team that monitors system health (humans-on-the-loop, not in-the-loop). Reserve human review only for regulatory requirements and appeals.`, points:10, feedback:`This is the right framework. The key insight is the distinction between "humans in the loop" (reviewing every decision) and "humans on the loop" (monitoring the system and intervening when needed). Full automation doesn't mean no human oversight — it means human oversight at the system level, not the transaction level. Circuit breakers that automatically pause lending if default rates spike above thresholds provide real-time safety. Bias audits ensure the model doesn't drift into discriminatory patterns. The appeals process gives wrongly rejected borrowers a path to resolution. This architecture enables scale (100M+ customers) while maintaining safety — you can't achieve both with humans reviewing individual decisions.`},
+        {text:`Keep the current hybrid model: AI handles the 70% of straightforward cases, humans review the 30% of complex cases. The cost of maintaining human reviewers is small compared to the reputational risk of a fully automated system making a bad high-value decision.`, points:4, feedback:`Keeping humans in the loop for 30% of decisions creates a permanent scaling bottleneck. If you process 1 million applications per day and 30% need human review, that's 300,000 decisions requiring human reviewers — an army of loan officers that grows linearly with application volume. Worse, the "complex cases" are exactly where the AI needs the most training data to improve. By routing them to humans, you starve the model of the data it needs to handle these cases. The best path to trustworthy AI is not keeping humans permanently in the loop — it's building robust automated safety systems and investing in model improvement on the hard cases.`},
+        {text:`Go fully automated immediately across all loan types and sizes. The data shows AI accuracy is within 0.3% of human reviewers even on edge cases. Removing humans entirely maximises efficiency and eliminates the bottleneck. If problems arise, roll back.`, points:3, feedback:`The data supports full automation technically, but the approach is reckless. Removing all human oversight overnight without safety architecture is the kind of move that creates catastrophic risk. What if the model encounters a scenario it's never seen — a market crash, a new fraud pattern, a data pipeline failure? Without circuit breakers, anomaly detection, and monitoring, the system would continue making decisions based on faulty assumptions. "Roll back if problems arise" assumes you'll detect problems quickly — but silent model degradation can cause millions in losses before metrics show the impact. Full automation requires safety infrastructure first.`},
+        {text:`Implement a gradual automation strategy: move from 70% to 85% automated over 6 months, then 95% over the next 6 months, then evaluate full automation. At each stage, compare AI-only decisions against a sample reviewed by humans to validate accuracy hasn't degraded.`, points:6, feedback:`The gradual approach is methodologically sound — it manages risk through staged rollout with validation. However, it's unnecessarily slow if the right safety architecture is in place. The comparison between AI and human decisions provides validation but also creates a false sense of security: human reviewers themselves have error rates, biases, and inconsistencies that a well-designed AI system can avoid. The bottleneck isn't confidence in the AI — it's confidence in the safety systems around the AI. Build the circuit breakers, anomaly detection, and monitoring first, then full automation can happen faster. Don't let the transition timeline substitute for proper safety architecture.`}
+      ],
+      competency:[0,8,9]
+    },
+    {
+      scenario:`2016 — Data Privacy vs. AI Capability: The Governance Challenge\n\nThe company's AI models are getting more accurate as they process more data. The data science team proposes a new initiative: cross-referencing users' payment data with their e-commerce browsing behaviour, social media activity (from a data partnership), and telecommunications metadata (from a carrier partnership) to build richer user profiles.\n\nThe models show that this "data enrichment" would improve credit scoring accuracy by 2.1% — translating to approximately $40M in reduced annual defaults.\n\nHowever, the Chief Privacy Officer raises concerns: (1) Users consented to payments data being used for credit scoring, but not browsing or social data. (2) The data partnerships may not comply with evolving privacy regulations. (3) Public backlash against big-tech surveillance is growing. (4) Regulatory enforcement is tightening globally.`,
+      question:`How should the CDO balance data capability with privacy governance?`,
+      options:[
+        {text:`Reject the cross-referencing proposal. The 2.1% accuracy improvement doesn't justify the privacy risks. Instead, invest in improving models using only data that users explicitly consented to share for credit scoring. Build a privacy-first data governance framework with strict purpose limitation and data minimisation principles.`, points:10, feedback:`This is the right call. A 2.1% accuracy improvement sounds significant, but the risk-adjusted calculation tells a different story. The $40M in reduced defaults must be weighed against: (1) Regulatory fines that could reach hundreds of millions under privacy laws. (2) Reputational damage if users discover their browsing and social data are being used for credit decisions without clear consent. (3) Partnership risks if data providers face regulatory action. (4) Legal precedent if this becomes a test case for regulators. More importantly, investing in better models with consented data is the sustainable path. Privacy-first AI doesn't mean worse AI — it means more disciplined feature engineering, better data quality, and models that don't depend on ethically questionable inputs.`},
+        {text:`Proceed with the data enrichment with enhanced consent: update the user agreement to explicitly disclose the use of browsing and social data for credit scoring, and give users the option to opt out. The 2.1% improvement is too valuable to ignore, and transparent consent addresses the privacy concerns.`, points:4, feedback:`Updating consent language doesn't solve the underlying problem. "Consent" in a lending context is often illusory — if users believe that opting out might reduce their credit approval chances, they'll consent to anything. This is why privacy regulators are moving beyond consent-based frameworks toward purpose limitation: just because a user clicks "agree" doesn't mean using their social media data for credit scoring is appropriate. Additionally, browsing behaviour and social media activity have weak causal connections to creditworthiness. The model might be learning correlations (people who browse luxury goods default less) that encode socioeconomic bias. The 2.1% improvement may come partly from bias, not genuine predictive signal.`},
+        {text:`Implement the data enrichment program but with strict technical safeguards: anonymise and aggregate the external data so individual browsing sessions can't be traced back to specific users. Use differential privacy techniques to add mathematical privacy guarantees to the credit scoring pipeline.`, points:6, feedback:`Technical safeguards are important but don't fully address the ethical concern. Differential privacy and anonymisation protect against re-identification, but the fundamental question remains: should browsing behaviour and social media activity influence credit decisions? Even if the data is anonymised, the model still learns patterns from those data sources — patterns that may encode bias. A technically private but ethically questionable system is still questionable. The better path is to separate the technical privacy question (how to protect data) from the ethical governance question (which data should influence which decisions). Technical safeguards are necessary but not sufficient.`},
+        {text:`Conduct a pilot program: test the enriched model on a small subset of users (with explicit consent) for 6 months. Measure not just accuracy improvement but also fairness metrics, user sentiment, and regulatory response. Use the results to make a data-driven decision about full rollout.`, points:5, feedback:`A pilot is a reasonable approach to gather evidence, but it has a critical flaw: you're still collecting and using the data during the pilot, which means you're still exposed to privacy risk — just at smaller scale. If regulators decide the practice is non-compliant, the pilot itself is a violation. And if the pilot produces positive accuracy results (which it likely will, since more data generally improves models), it creates momentum toward full rollout regardless of the ethical concerns. Sometimes the right answer isn't "let's test it" but "this isn't the right approach." The pilot structure also doesn't address the core question: is it ethically appropriate to use browsing and social data for credit decisions?`}
+      ],
+      competency:[4,5,8]
+    },
+    {
+      scenario:`2017 — Presenting the AI Strategy to the Board\n\nThe CDO has been invited to present the company's three-year AI roadmap to the board of directors. The board includes: a former regulator (focused on compliance risk), two venture capital representatives (focused on growth metrics), the founder/CEO (focused on vision), and three independent directors (focused on governance and risk management).\n\nThe AI roadmap calls for $200M in investment over three years to: build a next-generation risk engine, expand into insurance and wealth management AI, develop a proprietary large language model for customer service, and create an AI-as-a-Service platform for partner banks.\n\nThe previous CDO was replaced partly because board members felt AI investments were "a black box" with unclear returns. The board wants concrete metrics, clear risk assessment, and a compelling narrative.`,
+      question:`How should the CDO frame the AI investment case to the board?`,
+      options:[
+        {text:`Frame every AI initiative in terms of business outcomes, not technical capabilities. Show: cost per loan decision ($100 → $0.10), default rate reduction (basis points saved), new markets unlocked (addressable customer count), and revenue from AI-as-a-Service. Address each board member's concern directly: regulatory compliance metrics for the former regulator, growth multiples for the VCs, strategic moat for the CEO, and risk metrics for independent directors.`, points:10, feedback:`This is exactly how a CDO should present to a board. The previous CDO failed because they talked about AI in technical terms — model architectures, training pipelines, accuracy metrics — that board members couldn't connect to business value. The translation from technical to business language is: "our NLP model achieves 95% intent recognition" becomes "our AI customer service handles 80% of inquiries without human agents, saving $30M annually." Addressing each board member's frame of reference shows political acumen: the regulator needs to hear about compliance safeguards, the VCs need growth projections, the CEO needs the vision, and the independents need risk mitigation. This isn't just presenting data — it's storytelling with numbers.`},
+        {text:`Lead with the technical vision: present the AI architecture, model capabilities, and research breakthroughs. Show the board how the company's AI is more advanced than competitors. Technical superiority will naturally translate to business results, and the board needs to understand the technology to make informed investment decisions.`, points:2, feedback:`This is exactly the mistake the previous CDO made. Board members are not data scientists — and they shouldn't need to be. Presenting AI architecture and model capabilities alienates most of the audience and reinforces the "black box" perception. A board member hearing about "transformer architectures" and "attention mechanisms" can't evaluate whether the $200M investment is worthwhile. Even technically sophisticated board members want to know: "What does this mean for the business?" Leading with technology is a common CDO failure mode. The board's job is governance and strategy, not technical review. Give them the information they need to do their job: business outcomes, risk assessment, and competitive positioning.`},
+        {text:`Present a conservative plan that reduces the investment to $120M and focuses only on the proven risk engine and insurance AI. Defer the LLM and AI-as-a-Service initiatives until the core investments show returns. The board burned by the previous CDO will be risk-averse, so a smaller, safer plan has a better chance of approval.`, points:5, feedback:`Being conservative might win approval but loses the strategic argument. The $200M plan includes the AI-as-a-Service platform and LLM — these aren't luxuries, they're the future revenue diversification that makes the company less dependent on lending margins. A CDO who presents only what the board is comfortable with fails to lead. The right approach is to present the full $200M vision with conviction but acknowledge the risks clearly and propose milestone-based funding: approve $70M for year one with clear metrics, then release subsequent funding based on performance. This gives the board confidence without diluting the strategic ambition.`},
+        {text:`Hire a top-tier consulting firm to prepare an independent assessment of the AI strategy and present their findings alongside the CDO's plan. Third-party validation from a recognised firm will give the board more confidence in the investment.`, points:3, feedback:`Bringing in a consulting firm signals a lack of confidence in the CDO's own analysis. If the CDO needs external validation to convince the board, it raises the question: does the CDO actually understand the strategy well enough to execute it? Consulting firms also tend to genericise recommendations — they'll benchmark against industry standards rather than advocating for the bold, company-specific strategy that creates competitive advantage. The board should hear the AI strategy from the person who will execute it, not from consultants who won't be there for the implementation. Use third-party research as supporting evidence, but own the narrative.`}
+      ],
+      competency:[0,3,5]
+    },
+    {
+      scenario:`2017 — Building the Data Moat: How to Make the AI Advantage Permanent\n\nThe company's AI lending platform has been operating successfully for three years. Default rates are 40% lower than traditional lenders, and the cost per decision is 1/1000th of competitors. But the competitive landscape is shifting: three major banks have announced AI lending initiatives, and two well-funded startups are copying the company's model.\n\nThe CEO asks the CDO: "Our AI advantage is real but competitors are catching up. How do we make our data and AI advantage permanent — or at least extend it by 5-10 years?"`,
+      question:`What strategy should the CDO propose to build a lasting competitive moat?`,
+      options:[
+        {text:`Focus on data network effects: every loan processed generates data that improves the model, which makes the product better, which attracts more borrowers, which generates more data. Accelerate this flywheel by expanding into adjacent services (payments, insurance, wealth management) where each service generates data that improves the others. The moat isn't the model — it's the data ecosystem that feeds it.`, points:10, feedback:`This is the strongest moat strategy. Individual AI models can be replicated — competitors can hire the same researchers, use the same algorithms, and train on similar data. But a data ecosystem where payments data improves lending models, lending data improves insurance pricing, and insurance data reveals financial stress signals for lending — that's nearly impossible to replicate. It requires years of data accumulation across multiple services. The flywheel compounds: after 3 years and hundreds of millions of transactions, the company's models have seen patterns that a new entrant's models won't see for years. And the cross-service data integration creates insights that single-service competitors can never access regardless of how long they operate.`},
+        {text:`Invest heavily in AI talent and research to stay ahead on model architecture. Hire the best researchers, publish cutting-edge papers, and build AI capabilities that competitors can't replicate. Talent is the ultimate moat — the best data scientists in the world can build models that outperform anything competitors develop.`, points:4, feedback:`Talent-based moats are real but fragile. Top AI researchers can be hired away (with enough money, anyone can recruit talent), and model architectures published in papers become public knowledge within months. The most important research advances in AI (transformers, attention mechanisms, reinforcement learning) were all published openly. Talent provides a temporary advantage — perhaps 12-18 months before competitors catch up. Data network effects provide a compounding advantage that grows stronger over time. Invest in talent as a complement to the data moat, but don't rely on talent alone.`},
+        {text:`Secure exclusive data partnerships with telecommunications providers, e-commerce platforms, and government agencies. If competitors can't access the same data sources, they can't build equivalent models regardless of their AI talent or algorithms.`, points:5, feedback:`Exclusive data partnerships can provide a temporary advantage, but they're strategically fragile. Partners can renegotiate or terminate agreements. Regulators may mandate data sharing in financial services (open banking regulations are moving this direction globally). And exclusive data deals can create legal and ethical exposure. More fundamentally, relying on external data you don't generate creates dependency on third parties. The strongest moat comes from first-party data generated by your own platform — data that competitors literally cannot access because it's created by your users' interactions with your product. External partnerships supplement; they shouldn't be the moat.`},
+        {text:`Focus on speed of execution: release new AI features faster than competitors can copy them. Build a culture of rapid experimentation where the company ships 100 model updates per week while banks ship quarterly. Execution speed is the moat — if you're always 6 months ahead, competitors can never catch up.`, points:5, feedback:`Execution speed is valuable but is not a durable moat. Speed advantages erode as competitors build their own rapid deployment capabilities. Banks have massive engineering teams and can invest hundreds of millions in accelerating their AI development. A startup with a good MLOps team can also ship 100 updates per week. Speed creates a lead but doesn't create the exponential gap that data network effects create. After 5 years, a competitor with the same execution speed but less data will have inferior models — that's the moat. Invest in execution speed as an amplifier of your data advantage, not as the moat itself.`}
+      ],
+      competency:[1,6,7]
+    },
+    {
+      scenario:`2018 — Scaling from 10 Million to 100 Million Users\n\nThe company's lending platform has grown from 10 million to 30 million active users over the past year, and projections show 100 million users within 18 months. The current AI infrastructure, designed for 10 million users, is showing strain:\n\n• Model inference latency has increased from 200ms to 800ms\n• The feature store takes 6 hours to update (was 45 minutes)\n• Model training jobs that took 2 hours now take 14 hours\n• Two incidents of stale features serving in production (old data used for real-time decisions)\n\nThe CTO proposes a "Big Rewrite" — rebuilding the entire ML infrastructure on a modern distributed architecture. The CDO must decide the approach.`,
+      question:`How should the CDO handle the scaling challenge?`,
+      options:[
+        {text:`Approve the infrastructure rebuild but structure it as an incremental migration, not a Big Rewrite. Identify the three most critical bottlenecks (inference latency, feature freshness, and training pipeline), prioritise them by business impact, and re-architect each component one at a time while the existing system continues serving. Never stop serving users.`, points:10, feedback:`This is the right approach. "Big Rewrite" projects in production systems are among the highest-risk undertakings in engineering — they take longer than estimated, introduce new bugs, and leave you maintaining two systems simultaneously. Incremental migration lets you: (1) Prioritise by business impact — inference latency affects user experience NOW, while training time affects model freshness on a slower timeline. (2) Validate each component before moving to the next. (3) Roll back individual components if problems arise. (4) Continue serving 30M users without interruption. The order matters: fix inference latency first (direct user impact), then feature freshness (model accuracy), then training pipeline (iteration speed).`},
+        {text:`Proceed with the Big Rewrite. The current architecture was designed for 10M users and fundamentally can't scale to 100M. Trying to patch it incrementally is like renovating a house while living in it — messy and compromised. Spend 6 months building the new system, then migrate in one clean cutover.`, points:3, feedback:`The Big Rewrite is seductive but dangerous. Six-month estimates for infrastructure rebuilds typically become 12-18 months. During that time, your existing system continues to degrade, your engineers are split between maintaining the old system and building the new one, and no new ML features ship because everyone is focused on infrastructure. The "clean cutover" moment is the highest-risk point — if anything goes wrong, you have no gradual rollback path. Companies that attempted Big Rewrites of production ML systems (without incremental migration) have experienced multi-day outages that destroyed user trust. You can't afford to stop serving 30M users for a week while you fix cutover bugs.`},
+        {text:`Move to a fully managed cloud ML service. The scaling problems are infrastructure problems that cloud providers have already solved. By migrating to a managed platform, you eliminate the need to build and maintain ML infrastructure at scale.`, points:4, feedback:`Cloud ML services solve scaling problems but create strategic dependency. At 100M users, you'd be one of the cloud provider's largest ML customers — which means their pricing, uptime, and feature decisions directly impact your business. When your lending platform processes 10 million decisions per day and the cloud provider has a regional outage, your lending stops. You also lose the ability to optimise infrastructure for your specific workload: managed services offer general-purpose ML infrastructure, not infrastructure optimised for real-time credit scoring. For a company where AI is the core product, outsourcing infrastructure to a cloud provider trades one problem (scaling) for another (strategic control).`},
+        {text:`Scale horizontally by adding more compute resources to the existing architecture. Double the inference servers, add more workers to the feature store, and allocate more GPUs for training. This is faster than re-architecting and buys time to plan a proper migration.`, points:5, feedback:`Throwing hardware at scaling problems works temporarily but has diminishing returns. If inference latency increased 4x (200ms to 800ms) despite already having substantial compute, the bottleneck isn't raw compute — it's architectural. Adding more servers to a poorly designed system gives you more capacity but not better efficiency. The feature store taking 6 hours instead of 45 minutes suggests a data pipeline design problem, not a compute problem. More GPUs for training helps with throughput but doesn't address the underlying efficiency issues. This approach buys you 3-6 months before you hit the same walls at higher scale — and you've spent money on hardware that the re-architected system won't need.`}
+      ],
+      competency:[1,7,9]
+    },
+    {
+      scenario:`2018 — Structuring the Data & AI Organisation\n\nThe company has grown to 500 employees, with 80 in data and AI roles (data scientists, ML engineers, data engineers, analytics engineers). Currently, all 80 sit in a centralised "AI Centre of Excellence" that serves the entire company.\n\nThis structure is causing problems: the lending team complains that their model improvements take 3 months because the centralised queue is backlogged. The insurance team just launched but can't get AI resources allocated because lending is the priority. The payments fraud team wants to iterate on their detection model daily but is limited to the centralised team's monthly release cycle.\n\nThe CEO asks the CDO to propose a new organisational structure.`,
+      question:`What organisational structure should the CDO recommend?`,
+      options:[
+        {text:`Hub-and-spoke model: maintain a central AI platform team (25 people) that builds shared infrastructure — the feature store, model serving platform, monitoring tools, and ML pipeline framework. Embed the remaining 55 practitioners directly into business lines (lending, insurance, payments, etc.) where they report to business line leaders but follow standards and use tools built by the central team.`, points:10, feedback:`Hub-and-spoke is the optimal structure for a company at this stage. It solves all three problems: (1) Business lines get dedicated AI practitioners who understand their domain and can iterate at business speed — the lending team's 3-month queue disappears. (2) The central platform team ensures consistency, prevents duplication, and maintains the shared infrastructure that makes everyone more efficient. (3) Each business line can prioritise independently — insurance doesn't compete with lending for resources. The dual reporting (business line for priorities, central team for standards) is critical: without it, embedded practitioners drift from best practices and rebuild infrastructure that already exists. Without the central team, each business line would build its own ML pipeline, feature store, and monitoring — wasting millions in duplicated effort.`},
+        {text:`Fully decentralise: break the AI Centre of Excellence into business-line teams. Each business line gets its own autonomous AI team with full autonomy over their tech stack, priorities, and release cycle. The CDO's role shifts from managing a centralised team to setting standards and coordinating across business lines.`, points:4, feedback:`Full decentralisation solves the speed problem but creates new ones: (1) Each team builds its own ML infrastructure — the feature store is rebuilt 4 times, the model serving pipeline is rebuilt 4 times. That's millions in wasted engineering effort. (2) Best practices don't transfer: if the lending team discovers a better approach to model monitoring, the insurance team might never learn about it. (3) Standards diverge: each team uses different tools, frameworks, and processes, making it impossible to move people between teams or share innovations. (4) The data flywheel breaks: cross-business data integration (payments data improving lending models) requires a central architecture team to design and maintain. Full decentralisation optimises for team speed at the expense of organisational efficiency.`},
+        {text:`Keep the centralised model but scale it. Hire 40 more AI practitioners (to 120 total) and create dedicated squads within the Centre of Excellence for each business line. The squad members remain in the central team but are permanently assigned to a business line, creating a "virtual embed" without the fragmentation of actual decentralisation.`, points:6, feedback:`Dedicated squads within a centralised team is a reasonable compromise, but it often creates the worst of both worlds. The squad members are physically and organisationally in the central team, so they attend central team meetings, follow central release processes, and are subject to central prioritisation — but they're supposed to be responsive to business line needs. When the central team's priorities conflict with the business line's needs, the squad member is caught in the middle. Hiring 40 more people also doesn't solve the structural problem: more people in a broken structure just means more people experiencing the same bottlenecks. The queue backlog isn't a staffing problem — it's an organisational design problem.`},
+        {text:`Outsource non-core AI work to external vendors and consulting firms. Keep a small elite centralised team of 30 for the most strategic AI work (core lending model, proprietary algorithms) and use vendors for everything else (analytics, dashboards, standard ML features). This reduces headcount costs and lets the internal team focus on what matters most.`, points:3, feedback:`Outsourcing AI work creates dangerous knowledge gaps. External vendors don't understand your data, your domain, or your strategic context — they deliver generic solutions that meet specifications but miss the deeper insights that come from living in the data day after day. The lending team's model improvement takes 3 months because of organisational friction, not because the work itself is complex. Outsourcing would make it take 6 months (add vendor onboarding, knowledge transfer, contract negotiation, and review cycles). More critically, every ML feature built by a vendor is ML knowledge that stays outside your company. In a business where AI is the competitive advantage, outsourcing AI is outsourcing your moat.`}
+      ],
+      competency:[5,8,9]
+    },
+    {
+      scenario:`2019 — AI Ethics: Discovering Bias in the Credit Model\n\nAn internal audit reveals a concerning pattern in the company's AI credit scoring model: loan approval rates differ significantly across geographic regions. Rural applicants are rejected at 2.3x the rate of urban applicants, even when controlling for income level and repayment history.\n\nThe data science team investigates and finds the cause: the model uses "merchant diversity" as a feature (how many different merchants a user transacts with). Rural users naturally have fewer merchant options — they shop at 3-5 local stores instead of 50+ urban merchants. The model interprets low merchant diversity as a risk signal, when it's actually a geographic signal.\n\nThe Head of Risk notes: "The model is technically accurate — rural users DO default slightly more often (0.4% higher). But the merchant diversity feature is amplifying this gap beyond what the underlying risk justifies."\n\nRegulators have recently announced increased scrutiny of AI-powered lending decisions.`,
+      question:`How should the CDO address the geographic bias in the credit model?`,
+      options:[
+        {text:`Immediately remove "merchant diversity" as a feature, conduct a comprehensive fairness audit across all features for geographic, demographic, and socioeconomic proxies, implement fairness constraints in the model training pipeline, and establish an ongoing bias monitoring system with automated alerts. Publish a transparency report on the findings and remediation.`, points:10, feedback:`This is the gold standard response. Removing the biased feature is the immediate fix, but the comprehensive audit is what prevents the next bias from being discovered by regulators instead of internally. Fairness constraints in the training pipeline (equalised odds, demographic parity, or calibration across groups) ensure future models are tested for bias before deployment. The transparency report is a bold move that builds trust with regulators and the public — companies that self-disclose and remediate are treated far more favourably than those caught by external audits. The ongoing monitoring system is critical: bias can re-emerge as data distributions change. This isn't a one-time fix — it's a permanent governance requirement.`},
+        {text:`Remove the "merchant diversity" feature and replace it with a geography-adjusted version that normalises for the number of available merchants in each region. This preserves the predictive signal (spending behaviour) while removing the geographic bias. No need for a public disclosure — handle it as a routine model update.`, points:6, feedback:`Normalising the feature is a reasonable technical fix, but it only addresses the symptom, not the systemic issue. If "merchant diversity" encoded geographic bias, other features likely do too — transaction frequency, payment timing, and spending categories may all correlate with geography. Fixing one feature without auditing the full model leaves you vulnerable to the next discovery. More importantly, not disclosing this to regulators is risky: if they discover the bias independently (through their own analysis or a borrower complaint), the fact that you knew about it and didn't disclose it transforms a fixable issue into a cover-up narrative. In a regulatory environment with increasing AI scrutiny, self-disclosure is strategic, not optional.`},
+        {text:`The model is technically accurate — rural users DO default at a slightly higher rate. The merchant diversity feature is capturing a real signal. Rather than removing it, add a geographic adjustment factor that slightly boosts rural applicants' scores to offset the bias while maintaining overall model accuracy. This is a calibration fix, not a fairness problem.`, points:3, feedback:`This response confuses statistical accuracy with fairness. Yes, rural users default at a 0.4% higher rate. But the model amplifies this small difference through the merchant diversity feature, creating rejection rates 2.3x higher than justified by the actual risk difference. "Technically accurate" doesn't mean "ethically acceptable." Adding a geographic adjustment factor is a band-aid that introduces manual bias correction into an automated system — creating ongoing maintenance burden and regulatory questions about why manual adjustments are needed. The root cause (features that serve as geographic proxies) must be addressed, not patched. Regulators will not accept "the model is accurate" as justification for disparate impact.`},
+        {text:`Pause all lending to affected rural regions while the model is rebuilt. The reputational risk of continued biased lending is too high. Bring in an external AI ethics consultancy to audit the entire model and certify it as fair before resuming operations.`, points:4, feedback:`Pausing lending to rural regions punishes the exact population that's being harmed by the bias — cutting off credit access entirely is worse than biased access. This is a disproportionate response that would affect millions of borrowers and signal to the market that the AI system can't be trusted. External ethics consultancies add rigour but also add months to the timeline and create dependency on external validation. The CDO should own this remediation: if the data team can't diagnose and fix bias in their own models, that's a capability gap that needs internal investment, not external consultants. Fix the immediate issue (remove the feature), audit comprehensively (internal team with clear methodology), and implement ongoing monitoring (automated fairness checks).`}
+      ],
+      competency:[4,8,5]
+    }
+  ],
+  2: [
+    {
+      scenario:`2015 — Designing the Data Flywheel\n\nThe company's CDO is designing the foundational data strategy for a fintech platform that offers digital payments, micro-lending, and merchant services. Each product line currently operates with its own data infrastructure.\n\nThe CDO sees an opportunity: if data from each product line flows into a shared platform, each service can improve the others. Payment patterns can predict creditworthiness. Lending repayment data can identify reliable merchants for premium services. Merchant transaction data can improve fraud detection across all services.\n\nBut the product line leaders resist: "Our data is our competitive advantage within the company. Sharing it means other teams get our insights for free while we take on the privacy and security risk."`,
+      question:`How should the CDO design the cross-business data strategy?`,
+      options:[
+        {text:`Build a unified data platform with strict governance layers. Each business line contributes data to a shared feature store, but access is controlled through a data governance council that approves cross-business use cases. Implement privacy-preserving techniques (aggregation, differential privacy) so sensitive individual-level data stays within its originating business line while aggregated insights flow freely. Show each business line how they RECEIVE more value than they GIVE.`, points:10, feedback:`This is the optimal approach because it addresses both the technical architecture and the organisational politics. The governance council ensures that data sharing is controlled and compliant — no business line worries about uncontrolled access to their data. Privacy-preserving techniques protect sensitive data while enabling insights. But the most important element is the value equation: each business line must see concrete evidence that they receive more from the platform than they contribute. When the lending team sees that payment data improves their credit models by 15%, they become advocates for the unified platform. When payments sees that lending default data improves their fraud detection, resistance dissolves. Data sharing becomes a positive-sum game, not a zero-sum negotiation.`},
+        {text:`Mandate data sharing through an executive directive from the CEO. The company's data is a corporate asset, not a business line asset. All data flows into a centralised data lake managed by the CDO's team, with business lines accessing what they need through a request process. Resistance is an organisational problem, not a data problem.`, points:4, feedback:`Top-down mandates might force compliance but generate resentment and workarounds. Business line leaders who feel their data was "taken" will: (1) Share the minimum possible data, reducing quality. (2) Find creative ways to keep their most valuable features proprietary. (3) Blame the centralised platform when anything goes wrong. (4) Not invest in data quality because "it's not their platform anymore." Data governance requires buy-in, not just compliance. The CDO who forces data sharing through executive authority wins the battle but loses the war — they get a data lake full of low-quality, reluctantly-shared data that nobody trusts. The better approach earns buy-in by demonstrating concrete value to each business line.`},
+        {text:`Let each business line maintain its own data infrastructure but build APIs that allow controlled data sharing between teams. When the lending team needs payment data, they request it through a well-defined API with usage tracking. This preserves business line autonomy while enabling collaboration.`, points:5, feedback:`API-based sharing is better than silos but worse than a unified platform. The problem: APIs create point-to-point connections. With 4 business lines, you need up to 12 bilateral APIs (A→B, B→A, A→C, C→A, etc.). Each API has its own schema, latency, and data freshness. When the insurance team needs a feature that combines payment AND lending data, there's no single place to compute it — you need to orchestrate calls to two different APIs and join the results. This complexity grows quadratically with the number of business lines. A unified feature store with governance layers gives you the same access control as APIs but with a single, consistent data model. The API approach is a stepping stone, not the destination.`},
+        {text:`Focus on building the best possible data infrastructure within each business line first. Once each team has world-class data capabilities, then explore cross-business integration. The "build a unified platform" vision is too ambitious for a company still establishing individual product lines.`, points:3, feedback:`This approach optimises for local maxima while missing the global maximum. Each business line will build infrastructure optimised for their specific needs — different schemas, different tools, different processing pipelines. When you later try to integrate, you face a massive technical debt problem: converting between schemas, reconciling different definitions of the same user, and bridging incompatible architectures. The cost of integration grows exponentially with the time spent diverging. More importantly, the cross-business data flywheel IS the competitive advantage. A payment company's credit scoring isn't special. A lending company's fraud detection isn't special. But a platform where payment data makes lending better and lending data makes payments safer — that's a moat. Deferring integration means deferring the moat.`}
+      ],
+      competency:[0,1,6]
+    },
+    {
+      scenario:`2016 — Real-Time vs. Batch: Architecting the Decision Engine\n\nThe company processes 5 million transactions per day across payments, lending, and merchant services. The AI systems need to make several types of decisions:\n\n• Fraud detection on every transaction (current: 200ms latency requirement)\n• Credit scoring for loan applications (current: 1-second latency requirement)\n• Customer risk re-assessment (current: daily batch process)\n• Cross-selling recommendations (current: weekly batch process)\n• Anti-money laundering screening (current: daily batch with regulatory reporting)\n\nThe CTO proposes moving everything to real-time processing, arguing that real-time data leads to better decisions everywhere. The CFO pushes back on the cost — real-time infrastructure is 5x more expensive per compute unit than batch processing.`,
+      question:`How should the CDO architect the decision engine?`,
+      options:[
+        {text:`Implement a tiered architecture based on decision latency requirements. Real-time stream processing for fraud detection and credit scoring (where millisecond decisions matter). Near-real-time (minutes) for risk re-assessment. Batch processing for cross-selling and regulatory reporting. Each tier uses the appropriate infrastructure for its latency requirement, optimising cost-to-value.`, points:10, feedback:`This is the correct architecture. Not every decision benefits equally from real-time data. Fraud detection at 200ms latency requires stream processing — a 5-second delay means the fraudulent transaction has already been approved. Credit scoring in 1 second enables the "instant loan" experience that differentiates the product. But cross-selling recommendations don't need to be real-time — a recommendation generated overnight is just as good as one generated in milliseconds. Anti-money laundering has regulatory batch reporting requirements regardless of processing speed. The tiered approach delivers the right latency for each use case while controlling infrastructure costs. Moving everything to real-time would cost 5x more but only improve outcomes for fraud and credit — the other use cases gain nothing from sub-second latency.`},
+        {text:`Move everything to real-time. The CTO is right — real-time data always leads to better decisions. If a customer's risk profile changes at 2pm, the daily batch won't catch it until tomorrow. Real-time processing across all systems creates a unified, always-current view of every customer and transaction. The 5x cost increase is justified by better decision quality.`, points:3, feedback:`"Real-time is always better" is a common misconception. For cross-selling recommendations, the difference between a recommendation based on data from 10 seconds ago vs. 12 hours ago is negligible — purchase patterns don't change by the minute. For regulatory reporting, batches are often required by the format and timing that regulators specify. The 5x cost increase for real-time infrastructure across ALL systems would consume budget that's better spent on model improvement. Worse, real-time systems are more complex to build, debug, and monitor — introducing real-time processing where it's not needed creates operational risk without proportionate benefit. Architect for the latency each use case actually requires, not the lowest possible latency everywhere.`},
+        {text:`Keep everything as batch processing but increase batch frequency. Move from daily to hourly batches for risk assessment, and from weekly to daily for cross-selling. This improves freshness without the complexity and cost of real-time infrastructure.`, points:5, feedback:`Increasing batch frequency is a pragmatic improvement but misses the strategic point. Fraud detection at hourly batch frequency means up to 60 minutes of undetected fraud — thousands of fraudulent transactions before the system catches up. Credit scoring in hourly batches means borrowers wait an hour for a loan decision, destroying the "instant lending" value proposition. For these use cases, batch processing at any frequency is fundamentally wrong — the architecture must support millisecond decisions. For other use cases (cross-selling, regulatory reporting), increased batch frequency is appropriate. The key insight: different decisions have fundamentally different latency requirements. A one-size-fits-all approach, whether real-time or batch, optimises for simplicity at the expense of either cost or capability.`},
+        {text:`Implement real-time processing for fraud detection only (the highest-risk use case) and keep everything else as batch. Fraud is the only use case where a delay directly causes financial loss. For lending, a 24-hour turnaround is industry standard and acceptable to most borrowers.`, points:4, feedback:`Real-time fraud detection is essential but limiting the real-time capability to fraud alone misses a strategic opportunity. "24-hour lending turnaround is industry standard" is precisely the mindset that AI-native companies disrupt. The "instant loan" experience — apply in 3 minutes, approved in 1 second — is not just faster processing. It enables entirely new use cases: point-of-sale financing, emergency micro-loans, and instant merchant cash advances that are impossible with 24-hour turnarounds. The CDO should think beyond what's "industry standard" and design for what the technology makes possible. Real-time credit scoring is a competitive differentiator, not just an operational improvement.`}
+      ],
+      competency:[1,7,8]
+    },
+    {
+      scenario:`2016 — AI-Powered Customer Service: Design and Deployment\n\nThe company's customer service team handles 200,000 inquiries per day. Of these, 65% are routine (balance inquiries, transaction status, payment scheduling) and 35% are complex (dispute resolution, fraud claims, loan modification requests).\n\nThe AI team has built a conversational AI system that can handle 90% of routine inquiries with 97% accuracy. The Head of Customer Service supports automation of routine inquiries but insists that the AI should never handle complex cases — "one botched fraud claim response and we lose the customer forever."\n\nThe CFO sees potential to reduce the 800-person customer service team by 400 people. The CEO wants to improve response time from an average of 12 minutes to under 30 seconds.`,
+      question:`How should the CDO design the AI customer service strategy?`,
+      options:[
+        {text:`Deploy AI as the primary interface for all inquiries. Route routine inquiries to full AI resolution (with option to escalate). Route complex inquiries to AI-assisted human agents — the AI summarises the customer's history, suggests resolution options, and drafts responses for the agent to review and send. Redeploy freed staff as AI trainers, quality reviewers, and complex-case specialists rather than laying them off.`, points:10, feedback:`This is the optimal design because it creates value at every tier. For routine inquiries: full AI resolution delivers the CEO's 30-second response goal for 65% of volume. For complex inquiries: AI augmentation makes human agents 3-4x more productive by eliminating research time (the AI already knows the customer's history) and drafting responses (the agent edits rather than writes from scratch). Redeploying staff rather than laying them off is both ethical and strategic: freed agents become the training data engine that makes the AI better. They review AI responses, flag errors, and handle the edge cases that train the model. This creates a virtuous cycle where human expertise continuously improves the AI. The CFO gets cost reduction (fewer agents needed as AI improves), the CEO gets speed, and the Head of Customer Service gets better outcomes for complex cases.`},
+        {text:`Deploy AI for routine inquiries only, with a clear handoff to human agents for anything the model classifies as complex. Do not use AI for complex cases at all — the risk of a bad automated response on a fraud claim or dispute outweighs any efficiency gain. Reduce the customer service team by 400 as the CFO suggests.`, points:5, feedback:`This approach captures the easy wins but leaves significant value on the table. By completely excluding AI from complex cases, you miss the opportunity for AI augmentation — not AI automation — of human agents on complex work. AI can summarise customer history in 2 seconds (vs. 5 minutes of manual research), suggest resolution precedents, and draft responses without ever making the final decision. The agent remains in control but works much faster. Laying off 400 people also creates risks: seasonal volume spikes, unexpected surges (system outages that generate support tickets), and the loss of institutional knowledge. Redeploying is more expensive short-term but more resilient and creates the feedback loop that improves the AI.`},
+        {text:`Start with a limited pilot: deploy AI for the 3 most common routine inquiry types only. Monitor performance for 3 months before expanding. Do not change staffing until the pilot proves successful. This cautious approach minimises risk.`, points:4, feedback:`The pilot is unnecessarily slow. The AI already handles 90% of routine inquiries at 97% accuracy — this isn't an unproven technology needing a cautious pilot. The 3-month timeline means 3 more months of 12-minute average response times and growing customer frustration. Pilots are appropriate when there's genuine uncertainty about whether the technology works. Here, the technology has been tested and validated — the question is how to deploy it effectively, not whether to deploy it. A phased rollout (deploy for all routine inquiries immediately, then expand to AI-assisted complex cases) moves faster while still managing risk through continuous monitoring.`},
+        {text:`Let AI handle everything — routine and complex. If it's 97% accurate on routine inquiries, invest in making it 95%+ accurate on complex inquiries. The goal should be fully automated customer service with zero human agents within 2 years. This is the most cost-effective approach.`, points:3, feedback:`Full automation of complex customer service is a goal for the future, not the present. Complex inquiries — fraud disputes, loan modifications, hardship cases — involve emotional customers, nuanced judgment, and regulatory requirements (some dispute resolution processes legally require human review). A 95% accuracy rate on complex cases means 5% of fraud claims, disputes, and hardship cases get wrong responses — that's 3,500 mishandled sensitive cases per day. Each one is a potential regulatory complaint, social media backlash, or lost customer. The right architecture is AI-primary for routine + AI-assisted humans for complex, with the automation frontier advancing as the AI proves itself on increasingly complex cases over time.`}
+      ],
+      competency:[0,3,7]
+    },
+    {
+      scenario:`2017 — Breaking Down Data Silos: Cross-Business Integration\n\nThe company now operates four major business lines: digital payments (300M transactions/month), micro-lending (2M loans/month), insurance (500K policies), and wealth management (newly launched, 100K accounts).\n\nEach business line built its data infrastructure independently over 2-3 years. The result:\n\n• Payments defines a "user" by phone number\n• Lending defines a "user" by national ID\n• Insurance defines a "user" by policy number\n• Wealth management defines a "user" by account number\n\nThe same person might have 4 different identifiers across 4 systems with no automated link between them. Cross-business queries require manual data matching that takes weeks.`,
+      question:`How should the CDO approach the data integration challenge?`,
+      options:[
+        {text:`Build a unified identity resolution layer: a master data management system that creates a single "golden record" for each user by linking identifiers across all business lines. Use deterministic matching (same phone + same national ID = same person) and probabilistic matching (similar name + same address + overlapping transactions = likely same person) with human review for ambiguous cases. This becomes the foundation for all cross-business analytics and AI.`, points:10, feedback:`Identity resolution is the correct first step because every cross-business insight depends on knowing that User A in payments is the same person as User B in lending. Without this, you can't build the data flywheel (payment data improving credit models) because you literally can't connect the data. The combination of deterministic and probabilistic matching maximises match rate while controlling false positives. Human review for ambiguous cases ensures accuracy without blocking the 90%+ of clear matches. Once the identity layer exists, every cross-business use case becomes possible: payment patterns predicting creditworthiness, lending behaviour predicting insurance risk, and comprehensive risk views for wealth management. This is foundational infrastructure — without it, the unified data platform is just a data lake with four disconnected puddles.`},
+        {text:`Standardise all business lines on a single user identifier (national ID) going forward. Require every new user across all products to register with their national ID. Run a one-time migration to match existing records across systems. This creates a clean, simple identity model.`, points:5, feedback:`Standardising on a single identifier is conceptually clean but practically problematic. Not all users have national IDs (some target markets have low ID penetration). Some products naturally use different identifiers: payments is phone-first because transactions happen via mobile; insurance requires policy numbers for regulatory reasons. Forcing everyone to use national ID creates friction at registration (users who don't have their ID handy won't complete signup) and doesn't solve the historical data problem (matching 300M payment records to 2M lending records by national ID requires the identity resolution work anyway). The real world doesn't have clean, single identifiers — the system must accommodate multiple identifiers and link them intelligently.`},
+        {text:`Build cross-business data marts: pre-computed datasets that join information from multiple business lines for specific use cases (e.g., a "credit enrichment" mart that combines payment and lending data). Each mart is designed for a specific AI model or analytics use case. Business lines contribute data to marts they participate in.`, points:6, feedback:`Data marts solve specific use cases but miss the foundational problem: without identity resolution, you still can't reliably join data across business lines. A "credit enrichment" mart that combines payment and lending data requires knowing which payment user is which lending user — you're back to the identity problem. Building use-case-specific marts without solving identity means each mart duplicates the matching logic, potentially with different quality and different definitions of "same person." The marts approach works AFTER identity resolution, as a performance optimisation layer — pre-compute common joins for fast access. But it doesn't replace the need for a unified identity foundation.`},
+        {text:`Don't integrate the data infrastructure — instead, build federated AI models that can learn across business lines without moving data. Each business line keeps its own data in its own system, and the AI models are trained to incorporate signals from all systems without creating a centralised store. This avoids the complexity and privacy risk of data centralisation.`, points:4, feedback:`Federated learning is an interesting approach for privacy-sensitive scenarios (e.g., training across hospitals without sharing patient data), but it adds significant complexity and reduces model performance compared to centralised training. For a company where all business lines belong to the same entity and users have consented to data use across services, federation introduces complexity without a strong privacy justification. Federated models also can't support the real-time cross-business features that create the most value: "this user's payment behaviour just changed, immediately update their credit risk score" requires centralised, linked data, not federated signals. Use federation where regulatory or privacy requirements demand it; don't use it to avoid the organisational work of data integration.`}
+      ],
+      competency:[1,4,9]
+    },
+    {
+      scenario:`2017 — AI Talent Strategy: Competing for Data Scientists\n\nThe company needs to grow its AI team from 80 to 200 people over the next 18 months to support expansion into insurance, wealth management, and the AI-as-a-Service platform. The challenge: the company is competing for talent against major technology companies that offer:\n\n• 2-3x higher base compensation\n• Publication opportunities and research freedom\n• Global brand recognition\n• Stock options in publicly traded companies\n\nThe company's advantages: real-world impact at massive scale (hundreds of millions of users), unique data sets, and the opportunity to work on problems that directly affect financial inclusion for underbanked populations. Current AI team retention is 78% (industry average: 82%).`,
+      question:`What talent strategy should the CDO propose?`,
+      options:[
+        {text:`Build a three-tier talent pipeline: (1) Recruit experienced ML leaders (10-15 people) from industry with competitive packages and equity — these leaders attract and mentor others. (2) Partner with top universities to create an "AI Fellowship" program that trains promising graduates on the company's unique problems — hire the best fellows. (3) Invest heavily in upskilling existing employees from adjacent roles (software engineers, data analysts) through an internal ML academy. Target a 60% internal development / 40% external hire ratio.`, points:10, feedback:`This three-tier approach is strategically sound because it addresses the talent challenge at every level. Recruiting experienced leaders (Tier 1) is the hardest and most important: one excellent ML director attracts 5-10 strong engineers who want to work with them. The fellowship program (Tier 2) creates a branded talent pipeline — graduates of "Company X AI Fellowship" become ambassadors who attract their peers. Internal upskilling (Tier 3) is the most scalable: you have software engineers who understand the domain and the codebase — teaching them ML is faster and cheaper than teaching ML experts about fintech. The 60/40 ratio ensures the team maintains institutional knowledge while bringing in fresh perspectives. And the retention problem: the internal academy and fellowship create loyalty through career development that pure compensation can't match.`},
+        {text:`Match big tech compensation. The talent war is primarily a compensation war. Offer competitive base salaries, generous equity, and a $50K signing bonus for experienced data scientists. If the company can't match Google and Meta on pay, it will always lose the top candidates.`, points:4, feedback:`Matching big tech compensation is necessary for senior hires but insufficient and unsustainable as an entire strategy. The company cannot match the total compensation packages of companies with multi-trillion-dollar market caps and publicly traded stock. Even if you match base salary, stock options in a late-stage private company are worth far less than RSUs in a public giant. More importantly, compensation-driven hires are compensation-driven leavers: they'll jump to the next highest bidder in 18 months. Building a 200-person team through compensation competition means permanently running a bidding war you can't win. The unique advantages (real-world impact, unique data, financial inclusion mission) attract people motivated by impact, not just pay — and those people stay longer.`},
+        {text:`Acquire a small AI startup (20-30 people) for its team. This provides an instant injection of experienced, cohesive AI talent. Then use the acquired team as the nucleus to recruit around. Acquisitions are faster than individual hiring and bring teams that already work well together.`, points:5, feedback:`Acqui-hires can provide a talent boost, but they come with significant risks: (1) Cultural integration — the acquired team has different norms, tools, and expectations that may clash with the existing 80-person team. (2) Retention — acqui-hire talent often leaves after their retention period (usually 2-3 years), especially if integration is poor. (3) Cost — acquiring a 25-person AI startup costs $20-50M+ at current valuations, and that's before retention packages. (4) Focus disruption — the acquired team's expertise may not align with the company's specific needs (fintech AI vs. whatever the startup was building). Use acqui-hires selectively for specific capability gaps, but don't rely on them as the primary talent strategy. Building internal capability is more sustainable.`},
+        {text:`Open an AI research lab in a city with a dense ML talent market (e.g., near a top university). Give the lab researchers publication freedom and access to the company's unique data sets. Position the lab as a "best of both worlds" — academic freedom with real-world impact. This attracts research talent that big tech and academia compete for.`, points:6, feedback:`A research lab can attract a specific type of talent (researchers who value publication and intellectual freedom) but addresses only part of the need. The company needs 120 additional people across ML research, ML engineering, data engineering, and applied data science. A research lab attracts researchers but not the engineers who productionise models, build pipelines, and maintain infrastructure. There's also a risk: research labs that operate separately from the product organisation often produce interesting papers but limited business impact. The research must be tightly integrated with product development. As one component of a broader talent strategy, a research lab adds value. As the primary strategy, it's too narrow.`}
+      ],
+      competency:[5,9,3]
+    },
+    {
+      scenario:`2018 — Navigating AI Regulation in Financial Services\n\nThe government announces a comprehensive new regulatory framework for AI in financial services. Key provisions include:\n\n1. Explainability requirement: all AI-driven lending decisions must be explainable to the applicant in plain language\n2. Right to human review: borrowers can request human review of any AI decision\n3. Annual algorithmic audits by accredited third-party auditors\n4. Data localisation: all customer data must be stored within the country\n5. AI model documentation: full documentation of training data, model architecture, and performance metrics must be maintained\n\nThe timeline is 18 months for full compliance. The CTO estimates compliance will cost $30-50M and require significant re-architecture. The Head of Government Relations suggests lobbying to delay or water down the requirements.`,
+      question:`What should the CDO's regulatory strategy be?`,
+      options:[
+        {text:`Proactive engagement: embrace the regulation as a competitive advantage. Comply early and exceed requirements. Help shape implementation guidelines by serving on regulatory advisory committees. Use compliance as a differentiator — "we are the only AI lender that meets every requirement" — while competitors scramble to comply. Turn the $30-50M compliance cost into a marketing and competitive positioning investment.`, points:10, feedback:`This is the strategically superior response. Companies that embrace regulation early gain three advantages: (1) They influence how vague provisions are interpreted — by serving on advisory committees, the CDO can advocate for interpretations that align with the company's existing architecture. (2) They build compliance infrastructure that becomes a barrier to entry for smaller competitors who can't afford the $30-50M investment. (3) They establish trust with regulators that pays dividends in future regulatory decisions. The explainability requirement, for example, seems burdensome but actually forces better model design — models that can explain their decisions are also models that humans can debug, audit, and improve. Turning compliance into competitive advantage is what separates strategic CDOs from reactive ones.`},
+        {text:`Lobby to delay implementation and soften the explainability requirement. The current 18-month timeline is unrealistic for the explainability provision — deep learning models used for credit scoring are inherently difficult to explain. Propose a 36-month timeline with a "substantial compliance" standard rather than full explainability.`, points:3, feedback:`Lobbying to weaken regulation is a short-term play with long-term consequences. (1) If you succeed in delaying, you lose the first-mover advantage of early compliance. (2) Regulators remember which companies tried to water down consumer protections — this damages the relationship you'll need for every future regulatory interaction. (3) The explainability requirement pushes toward better model architectures (interpretable models, SHAP values, counterfactual explanations) that actually improve the product. Resisting this push means keeping opaque models that are harder to debug and harder to trust. (4) Global regulatory trends are moving toward more AI regulation, not less — delay just postpones the inevitable while competitors who embrace it early gain ground.`},
+        {text:`Comply with all requirements by the deadline but do the minimum necessary. Implement basic explainability (template-based explanations like "your application was declined due to insufficient transaction history"), human review as a form process, and documentation that meets the letter of the law. Save the remaining budget for product development.`, points:4, feedback:`Minimum compliance is a defensive posture that misses the strategic opportunity. Template-based explanations ("declined due to insufficient transaction history") technically meet the letter of the explainability requirement but not the spirit — regulators will likely push back when they see every rejection getting the same generic explanation. Minimum compliance also means you'll need to upgrade when regulators tighten requirements (which they always do after the first enforcement cycle). The CDO who invests in genuine explainability (personalised, specific reasons for each decision) builds infrastructure that's valuable beyond compliance: explainable models are more debuggable, auditable, and trustworthy. The budget "saved" on compliance will be spent twice when regulations tighten.`},
+        {text:`Move the most sensitive AI systems (credit scoring, fraud detection) to rule-based models that are inherently explainable. Keep ML models for non-regulated use cases (recommendations, analytics). This eliminates the explainability challenge entirely and ensures full compliance.`, points:4, feedback:`Replacing ML with rule-based models solves the compliance problem by destroying the competitive advantage. The company's entire value proposition — AI-powered lending at 1/1000th the cost with superior accuracy — depends on machine learning models that find patterns humans can't code as rules. Rule-based credit scoring reverts to the traditional banking approach: a few dozen hard-coded rules that are transparent but inflexible. The accuracy drops, the cost per decision increases, and the ability to serve underbanked populations (who don't fit neatly into rules) disappears. Modern explainability techniques (SHAP, LIME, counterfactual explanations) can make ML models explainable without replacing them. The CDO should invest in explainability layers ON TOP of ML models, not replace ML models with rules.`}
+      ],
+      competency:[4,5,8]
+    },
+    {
+      scenario:`2018 — Opening the AI Platform: AI-as-a-Service\n\nThe company's AI capabilities — credit scoring, fraud detection, customer segmentation, risk assessment — have been built for internal use. Now, small and medium banks approach the company: "We can't build AI like yours. Can we license your AI to use in our own lending operations?"\n\nThe CDO sees an opportunity to create an "AI-as-a-Service" (AIaaS) platform. But there are concerns:\n\n• The CFO worries about cannibalisation: "If we give our AI to competitors, they'll compete against us more effectively."\n• The CTO worries about complexity: "Serving external clients requires enterprise-grade SLAs, multi-tenancy, and customisation we don't have."\n• The CEO is enthusiastic: "This could be a new revenue stream AND make our AI better through more data."`,
+      question:`Should the CDO recommend launching AI-as-a-Service, and if so, how?`,
+      options:[
+        {text:`Yes — launch AIaaS but with strategic guardrails. Offer general-purpose capabilities (fraud detection, basic credit scoring) to small banks that don't compete in the company's core market. Do NOT offer the proprietary credit scoring models that power the company's own lending — those stay exclusive. Price to attract volume (more data = better models for everyone). The data from partner banks' usage feeds back into model training, creating a data flywheel that strengthens the company's own AI.`, points:10, feedback:`This is the strategically optimal approach. It addresses every concern: (1) Cannibalisation: by limiting AIaaS to general capabilities and non-competing banks, the company's proprietary advantages in its core market are preserved. A small bank using the fraud detection API doesn't compete with the company's AI-powered micro-lending. (2) Revenue: AIaaS creates a new high-margin revenue stream. Once the platform is built, the marginal cost of serving an additional bank is near-zero. (3) Data flywheel: this is the key insight. Every transaction processed through the AIaaS platform generates data that improves the underlying models — including the proprietary models the company uses internally. Partner banks pay for access AND contribute data that makes the company's AI better. This is the Amazon AWS playbook: build infrastructure for yourself, then sell it to others, using their usage to improve your own capabilities.`},
+        {text:`No — the AI is the company's core competitive advantage and should never be shared externally. The risk of empowering competitors outweighs the revenue opportunity. Instead, use the AI advantage to compete harder: expand into markets these small banks serve and win their customers with superior AI-powered products.`, points:4, feedback:`Keeping AI proprietary feels safe but misses a transformational opportunity. The "compete, don't cooperate" approach: (1) Limits the data flywheel to internal data only — external partners' data would significantly improve models. (2) Forgoes high-margin revenue that funds AI investment. (3) Ignores the ecosystem play — companies that become the AI platform for an industry often become more powerful than companies that compete within it. (4) Assumes the company can expand fast enough to serve every market these banks serve — which is unlikely given regulatory, capital, and operational constraints. Amazon didn't keep AWS internal because "competitors might use it." They realised that being the infrastructure provider is more strategically powerful than trying to run every business that needs compute.`},
+        {text:`Yes — launch the full AI platform with all capabilities, including proprietary credit scoring. The more banks that use the platform, the more data flows in, and the faster the AI improves for everyone. Don't hold back — network effects favour the platform with the most participants.`, points:4, feedback:`Offering the full proprietary credit scoring model is strategically reckless. The company's lending business depends on its AI being BETTER than what competitors have. If small banks can license the same credit scoring model, they offer the same lending experience — eliminating the company's competitive differentiation. Network effects matter, but so does strategic differentiation. The Amazon analogy is instructive: AWS sells compute and storage (generic infrastructure) but doesn't sell Amazon's proprietary product recommendation algorithms. The platform strategy works precisely because you sell general capabilities while keeping the strategic capabilities proprietary. Offer fraud detection, basic credit scoring, and customer segmentation as AIaaS. Keep the advanced credit models, real-time pricing algorithms, and personalised product engines exclusive.`},
+        {text:`Defer the decision for 2 years. The company's AI infrastructure wasn't designed for multi-tenancy and external SLAs. Building an enterprise-grade platform while simultaneously scaling internal systems risks both. Focus on perfecting internal capabilities first, then consider external opportunities from a position of even greater strength.`, points:5, feedback:`Deferring has a real opportunity cost. The small banks asking for AI capabilities today will find alternatives — other fintech platforms, cloud ML services, or consortiums that pool data. The window for becoming the AI platform for the banking industry is open now but won't stay open forever. First-mover advantage in platforms is significant because switching costs are high: once a bank integrates an AI platform, changing providers requires re-integration, re-validation, and re-training. The CTO's concern about multi-tenancy is valid, but it's an engineering problem with known solutions. A phased launch (start with 3-5 pilot banks, scale gradually) manages the technical risk without forfeiting the strategic opportunity. Waiting 2 years means arriving when the market already has an incumbent platform.`}
+      ],
+      competency:[0,3,6]
+    },
+    {
+      scenario:`2018 — Building the Feature Store: Centralised ML Infrastructure\n\nThe company now has 15 ML models in production across lending, payments, insurance, and fraud detection. A recurring problem: different teams independently compute similar features from the same underlying data.\n\nExamples of duplication:\n• The lending team computes "average monthly transaction value" for credit scoring\n• The fraud team computes "average transaction value over 30 days" for anomaly detection\n• The insurance team computes "monthly spending patterns" for risk assessment\n\nAll three are slightly different computations on the same transaction data. Differences in time windows, aggregation logic, and data freshness have caused inconsistencies: a user's "spending level" can differ across models.\n\nThe CDO proposes building a centralised feature store. The team leads push back: "We need features optimised for our specific models. A generic feature store will slow us down."`,
+      question:`How should the CDO design and implement the feature store?`,
+      options:[
+        {text:`Build the feature store as shared infrastructure with two layers: (1) A core layer of standardised features (transaction aggregates, user profiles, risk signals) computed once and shared across all teams — ensuring consistency and eliminating duplication. (2) A team-specific layer where individual teams can add custom features unique to their domain. Both layers are versioned, documented, and served through a unified API. Migrate teams incrementally, starting with the highest-duplication features.`, points:10, feedback:`The two-layer design elegantly resolves the tension between standardisation and flexibility. The core layer eliminates the duplication problem: "average monthly transaction value" is computed once, correctly, and used everywhere — no more inconsistencies across models. The team-specific layer preserves team autonomy: the fraud team can still compute specialised features unique to anomaly detection without going through a centralised process. Versioning ensures reproducibility (model A trained on feature v2.3 can be retrained on the same features later). Incremental migration reduces risk: start with the 10-15 features that all teams use (transaction aggregates, user demographics), prove the value, then expand. The team leads' concern is valid — but the answer isn't "no feature store," it's "a feature store that serves both shared AND team-specific needs."`},
+        {text:`Let teams continue computing their own features but create a "feature catalogue" that documents all features across teams. When teams need a feature, they check the catalogue first to see if something similar exists. If it does, they can reuse it. This is a lightweight coordination approach that doesn't require building new infrastructure.`, points:4, feedback:`A catalogue without enforcement doesn't solve the problem. Documentation only works if people read it — and in practice, ML engineers under deadline pressure compute what they need rather than searching a catalogue for something close. "Something similar" is the crux: the lending team's "average monthly transaction value" and the fraud team's "average transaction value over 30 days" ARE similar but have different time windows. A catalogue notes the difference but doesn't resolve it. The inconsistency problem persists: the same user still has different "spending levels" across models. And the duplication continues: new teams (like wealth management) will compute their own versions. A catalogue is useful as documentation for the feature store, but it's not a substitute for shared computation infrastructure.`},
+        {text:`Build a fully centralised feature store where all features are computed and managed by a dedicated feature engineering team. Individual ML teams submit feature requests, and the central team implements, validates, and serves them. This ensures perfect consistency and eliminates all duplication.`, points:5, feedback:`Full centralisation solves consistency but creates the bottleneck the team leads fear. If every feature must go through a central team, the lending team's urgent new feature (needed for a model improvement shipping next week) sits in a queue behind the insurance team's request and the payments team's request. This is the exact pattern that failed with the centralised AI Centre of Excellence (which the company restructured to hub-and-spoke). The feature store should be shared infrastructure, not a centralised service with a ticket queue. Teams should be able to add their own features to the store (with review and documentation standards) without waiting for a central team to implement them. Central ownership of the core layer + team autonomy for the custom layer is the right balance.`},
+        {text:`Use a third-party feature store platform (open-source or commercial). Several mature feature store solutions exist with built-in versioning, serving, and monitoring. This avoids the 6-12 months of custom development and gives the team proven infrastructure immediately.`, points:6, feedback:`Third-party feature stores are a legitimate option — tools like Feast, Tecton, and others have matured significantly. For many companies, buying makes sense. But the CDO should evaluate carefully: the company's feature requirements are specific to fintech (real-time transaction features, regulatory compliance requirements, cross-business data integration), and off-the-shelf tools may not support the tight integration with the existing unified data platform. If the company's data architecture is custom, the feature store often needs to be custom too. A hybrid approach (use a third-party framework as the foundation, customise the integration and business logic layers) might be optimal — getting the benefits of proven infrastructure while maintaining the flexibility to support domain-specific requirements.`}
+      ],
+      competency:[1,2,9]
+    },
+    {
+      scenario:`2019 — Measuring AI ROI: Justifying Continued Investment\n\nThe company has invested $350M in AI over 5 years. The CFO is preparing for the annual board review and wants the CDO to quantify the return on this investment.\n\nThe CDO can point to several outcomes:\n• Cost per loan decision: reduced from ~$100 (industry average) to ~$0.10\n• Default rate: 40% below industry average (saving an estimated $200M/year)\n• Customer service: 70% of inquiries handled by AI (saving ~$45M/year in agent costs)\n• Fraud detection: 99.7% accuracy, preventing an estimated $120M/year in fraud losses\n• Speed: loan decisions in 1 second vs. industry average of 3-5 days\n\nBut the CFO challenges: "These are operational metrics. Show me the actual financial return — IRR, NPV, or payback period. And how do we know the $350M wasn't better spent on business expansion?"`,
+      question:`How should the CDO frame the AI ROI for the board?`,
+      options:[
+        {text:`Present a comprehensive ROI framework with three layers: (1) Direct financial returns — the measurable savings and revenue (cost reduction: $245M/year in lending operations + $45M in customer service + $120M in fraud prevention = $410M annual value against a cumulative $350M investment = payback in under 1 year). (2) Competitive positioning value — the speed and accuracy advantages that attract customers from traditional banks (quantified through market share gains). (3) Strategic optionality — the AI platform enables future businesses (insurance, wealth management, AIaaS) that would be impossible without the investment.`, points:10, feedback:`This three-layer framework gives the CFO the financial rigour they need while ensuring the board understands the full picture. Layer 1 (direct returns) answers the CFO's specific question: $350M invested, $410M annual return = compelling payback in under a year. This alone justifies the investment. Layer 2 (competitive positioning) explains why market share is growing: customers choose the company over traditional banks because of speed and accuracy enabled by AI. Layer 3 (strategic optionality) is the most important for long-term thinking: the AI platform is the foundation for every future business line. Without it, insurance, wealth management, and AIaaS don't exist. This is like asking Amazon in 2008 "was the $2B AWS investment worth it?" The direct returns justified it, but the strategic optionality created a $500B+ business.`},
+        {text:`Focus exclusively on the hard financial metrics the CFO requested. Calculate the NPV of all measurable AI-driven cost savings and revenue over a 10-year horizon, discounted at the company's cost of capital. Present a clean IRR calculation showing AI investment outperforms alternative uses of capital. The board wants numbers, not narratives.`, points:6, feedback:`Hard financial metrics are essential — and the CDO should absolutely include NPV and IRR calculations. But focusing EXCLUSIVELY on measurable financial returns understates the value. Some of the most important AI benefits are difficult to quantify: How much is 1-second loan approval worth in customer acquisition? What's the financial value of serving 100 million previously unbanked customers (market creation, not just market capture)? How much would it cost to replicate the company's data flywheel from scratch? The board that only sees the financial ROI might rationally conclude "the returns are good, but we could get similar returns by investing in business expansion." The strategic framing prevents this by showing that AI investment IS business expansion — it's the infrastructure that makes expansion possible.`},
+        {text:`Reframe the question: "The AI investment isn't optional — it's infrastructure. You don't ask for the ROI of electricity or the internet. AI is the operating system of the business. The $350M is the cost of being in the AI-native lending business." Challenge the CFO to calculate the cost of NOT investing in AI.`, points:4, feedback:`This reframing is intellectually valid but politically tone-deaf. The CFO is asking a reasonable question on behalf of the board — investors deserve to know the return on a $350M investment. Refusing to quantify returns because "AI is like electricity" sounds evasive. It's the answer of a CDO who can't (or won't) measure the value of their work. Worse, it alienates the CFO — the person whose support the CDO needs for future investment. The "cost of NOT investing" argument is powerful as ONE part of the presentation, not the entire response. Show the financial returns first (establish credibility), then show competitive positioning (establish urgency), then show the counterfactual (what happens if we stop investing).`},
+        {text:`Benchmark against competitors: show that the company's AI spending as a percentage of revenue is in line with or below industry leaders. If peers spend 8-12% of revenue on technology and the company spends 10%, the investment is appropriate. The ROI is staying competitive.`, points:3, feedback:`Benchmarking tells you nothing about value creation. Spending the same percentage as competitors means you're running the same race — it doesn't mean you're winning. The company might be spending 10% of revenue on AI and getting 5x the return of a competitor spending 12%. Or it might be spending efficiently but on the wrong priorities. Benchmarks are useful for sanity-checking (if you're spending 30% when peers spend 10%, something is wrong) but useless for evaluating ROI. The board doesn't want to know "we spend what others spend." They want to know "every dollar we invested in AI generated X dollars of value." Answer the actual question.`}
+      ],
+      competency:[3,5,6]
+    },
+    {
+      scenario:`2020 — The 5-Year AI Vision: From AI-Assisted to AI-Autonomous\n\nThe company's AI systems have matured significantly over 6 years. The CEO asks the CDO to present a 5-year AI vision that will guide the next phase of the company's evolution.\n\nCurrent state: AI handles 85% of all decisions across the company. Default rates are the lowest in the industry. The AI-as-a-Service platform serves 50 partner institutions. The data flywheel across payments, lending, insurance, and wealth management is generating compounding advantages.\n\nBut the CDO sees emerging challenges: (1) AI regulation is tightening globally. (2) Competitors have narrowed the accuracy gap from 15% to 5%. (3) The "easy wins" in AI automation have been captured — remaining improvements require exponentially more effort. (4) New AI capabilities (large language models, generative AI) are emerging that could disrupt the current approach.\n\nThe CEO wants a bold but executable vision.`,
+      question:`What 5-year AI vision should the CDO present?`,
+      options:[
+        {text:`"From AI-Automated to AI-Autonomous": Evolve from AI that automates individual decisions to AI that autonomously manages entire business processes end-to-end. Phase 1 (years 1-2): integrate large language models for natural-language customer interactions and document processing. Phase 2 (years 3-4): develop AI agents that manage entire customer journeys — from acquisition to servicing to cross-selling — with minimal human direction. Phase 3 (year 5): create a self-improving AI ecosystem where models automatically detect degradation, retrain on new data, and adapt to market changes. Throughout: invest in responsible AI governance that scales with capability — the more autonomous the AI, the more robust the oversight.`, points:10, feedback:`This vision is bold, phased, and executable. It addresses each challenge: (1) Responsible AI governance baked into every phase pre-empts regulatory concerns — when regulators tighten requirements, the company is already compliant. (2) End-to-end AI management of business processes extends the competitive moat beyond individual model accuracy (where competitors are catching up) to system-level intelligence they can't replicate. (3) Self-improving systems address the diminishing returns problem — instead of humans manually finding improvements, the system finds its own. (4) LLM integration and AI agents embrace the emerging technology shift rather than being disrupted by it. The phasing is critical: each phase builds on the previous one, and the vision is testable at each stage. A vision without phases is a fantasy. A vision with clear milestones is a strategy.`},
+        {text:`Focus on deepening the data moat: expand into 5 new business lines (healthcare finance, education finance, real estate, supply chain, and government services) over 5 years. Each new business line generates unique data that strengthens the overall AI ecosystem. The vision is: become the universal AI-powered financial services platform.`, points:6, feedback:`Expansion into new verticals is a valid growth strategy, but it's a business vision, not an AI vision. The CEO asked for an AI vision — how will the AI capabilities themselves evolve? Entering 5 new business lines in 5 years is ambitious but doesn't address the emerging challenges: how to maintain the competitive moat as competitors catch up, how to incorporate new AI capabilities like LLMs, or how to manage increasingly complex AI governance. The data moat from expansion is real but takes years to materialise — and each new vertical has its own regulatory, operational, and domain complexity. The AI vision should guide how the company builds, deploys, and governs AI across ALL business lines (current and future), not just identify new business lines to enter.`},
+        {text:`Prioritise responsible AI and governance: make the company the global standard for ethical, transparent, and fair AI in financial services. Invest in explainability, fairness, and privacy-preserving AI as core technical capabilities. Seek regulatory endorsement and industry certifications. The competitive advantage shifts from "best AI" to "most trusted AI."`, points:6, feedback:`Responsible AI is essential but insufficient as the entire 5-year vision. Trust and governance are necessary conditions for long-term success, not the vision itself. A company known only for "trusted AI" but not for innovation risks being overtaken by competitors who are both trusted AND more capable. Responsible AI should be the foundation that every AI capability is built on — not a standalone strategy. The best vision integrates responsible AI into progressive capability expansion: "we build the most advanced AND most trustworthy AI, and we do this by making governance a core technical capability rather than a compliance afterthought." The CDO who leads with governance alone may find that the conversation shifts to "are we falling behind on innovation?"`},
+        {text:`Invest everything in generative AI and large language models. The next wave of AI is generative, and the company must be at the forefront. Rebuild the customer experience around conversational AI. Use generative AI for synthetic data generation to overcome data limitations. Create an AI research lab focused on foundation models for financial services.`, points:4, feedback:`Going all-in on generative AI is a hype-driven reaction, not a strategy. LLMs and generative AI are powerful tools but they don't replace the company's core capabilities — discriminative models for credit scoring, anomaly detection for fraud, and classification models for risk assessment. These existing capabilities generate the company's competitive advantage and revenue. LLMs add value in specific areas (customer service, document processing, natural-language interfaces) but aren't a replacement for the statistical AI that powers lending decisions. A 5-year vision that abandons proven capabilities for the latest technology trend is a recipe for strategic whiplash. Integrate generative AI where it adds value (Phase 1 of the recommended vision), but don't rebuild the entire AI strategy around it.`}
+      ],
+      competency:[0,6,8]
+    }
+  ]
+};
+
+
+// ─── PHASE MANAGEMENT ────────────────────────────────────
+function showPhase(p){
+  document.querySelectorAll('.phase').forEach(el=>el.classList.remove('active'));
+  document.getElementById('phase-'+p).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ─── INIT ─────────────────────────────────────────────────
+(function(){
+  const savedName = localStorage.getItem(LS.name);
+  const savedEmail = localStorage.getItem(LS.email);
+  const attemptsDone = parseInt(localStorage.getItem(LS.attempts)||'0');
+  if(attemptsDone >= 2){ showPhase('blocked'); return; }
+  if(savedName && savedEmail){
+    state.name = savedName;
+    state.email = savedEmail;
+    state.currentAttempt = attemptsDone + 1;
+    document.getElementById('attempt-badge-display').textContent = `🎯 Attempt ${state.currentAttempt} of 2`;
+    showPhase('intro');
+  } else {
+    showPhase('email');
+  }
+})();
+
+// ─── OTP ──────────────────────────────────────────────────
+function sendOTP(){
+  const name  = document.getElementById('input-name').value.trim();
+  const email = document.getElementById('input-email').value.trim();
+  const errEl = document.getElementById('email-error');
+  errEl.style.display='none';
+  if(!name || name.length<2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    errEl.style.display='block';
+    return;
+  }
+  state.name = name;
+  state.email = email;
+  state.otp = Math.floor(100000+Math.random()*900000).toString();
+  state.otpExpiry = Date.now() + 600000;
+  state.otpAttempts = 0;
+
+  localStorage.setItem(LS.name, name);
+  localStorage.setItem(LS.email, email);
+
+  const btn = document.getElementById('send-otp-btn');
+  btn.textContent='Sending...';
+  btn.disabled=true;
+  gtag('event','otp_requested',{sim:'CDO-SIM-1-AntGroup'});
+
+  emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
+    to_name: name,
+    to_email: email,
+    otp_code: state.otp,
+    sim_name: 'CDO SIM 1 — Ant Group'
+  }).then(()=>{
+    document.getElementById('otp-email-display').textContent = email;
+    showPhase('otp');
+    startOTPTimer();
+    btn.textContent='Send Verification Code →';
+    btn.disabled=false;
+  }).catch(()=>{
+    gtag('event','otp_failed',{sim:'CDO-SIM-1-AntGroup'});
+    btn.textContent='Send Verification Code →';
+    btn.disabled=false;
+    errEl.textContent='Failed to send code. Please try again.';
+    errEl.style.display='block';
+  });
+}
+
+function startOTPTimer(){
+  clearInterval(state.timerInterval);
+  state.timerInterval = setInterval(()=>{
+    const remaining = Math.max(0, state.otpExpiry - Date.now());
+    const m = Math.floor(remaining/60000);
+    const s = Math.floor((remaining%60000)/1000);
+    const el = document.getElementById('otp-timer');
+    if(el) el.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    if(remaining===0){ clearInterval(state.timerInterval); }
+  },1000);
+}
+
+function verifyOTP(){
+  const input = document.getElementById('input-otp').value.trim();
+  const errEl = document.getElementById('otp-error');
+  const okEl  = document.getElementById('otp-success');
+  errEl.style.display='none';
+  if(Date.now() > state.otpExpiry){
+    errEl.textContent='Code expired. Please request a new one.';
+    errEl.style.display='block';
+    return;
+  }
+  if(input !== state.otp){
+    state.otpAttempts++;
+    errEl.style.display='block';
+    return;
+  }
+  clearInterval(state.timerInterval);
+  okEl.style.display='block';
+  gtag('event','email_verified',{sim:'CDO-SIM-1-AntGroup'});
+  setTimeout(()=>{
+    document.getElementById('attempt-badge-display').textContent = `🎯 Attempt ${state.currentAttempt} of 2`;
+    showPhase('intro');
+  },800);
+}
+
+function resendOTP(){
+  showPhase('email');
+  document.getElementById('input-name').value = state.name;
+  document.getElementById('input-email').value = state.email;
+}
+
+// ─── SIMULATION ───────────────────────────────────────────
+function startSim(){
+  const questions = Q[state.currentAttempt];
+  state.currentQ = 0;
+  state.answers  = [];
+  state.totalScore = 0;
+  state.maxScore   = questions.reduce((sum,q)=>sum+Math.max(...q.options.map(o=>o.points)),0);
+  gtag('event','sim_started',{sim:'CDO-SIM-1-AntGroup',attempt:state.currentAttempt});
+  showPhase('questions');
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const questions = Q[state.currentAttempt];
+  const q = questions[state.currentQ];
+  const total = questions.length;
+  const qNum  = state.currentQ+1;
+
+  document.getElementById('q-progress-label').textContent = `Question ${qNum} of ${total}`;
+  document.getElementById('q-score-label').textContent = `Score: ${state.totalScore}`;
+  document.getElementById('progress-fill').style.width = `${((qNum-1)/total)*100}%`;
+
+  const scenarioEl = document.getElementById('q-scenario');
+  scenarioEl.innerHTML = q.scenario.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+
+  document.getElementById('q-question').textContent = q.question;
+
+  const optionsEl = document.getElementById('q-options');
+  optionsEl.innerHTML = '';
+  q.options.forEach((opt,i)=>{
+    const div = document.createElement('div');
+    div.className='option';
+    div.textContent=opt.text;
+    div.onclick=()=>selectOption(i);
+    optionsEl.appendChild(div);
+  });
+
+  document.getElementById('q-feedback').style.display='none';
+  document.getElementById('next-btn').style.display='none';
+}
+
+function selectOption(idx){
+  const questions = Q[state.currentAttempt];
+  const q = questions[state.currentQ];
+  const chosen = q.options[idx];
+  const maxPts = Math.max(...q.options.map(o=>o.points));
+
+  document.querySelectorAll('.option').forEach(el=>el.classList.add('locked'));
+
+  state.answers.push({q:state.currentQ, chosen:idx, points:chosen.points, maxPts, feedback:chosen.feedback, questionText:q.question});
+  state.totalScore += chosen.points;
+  document.getElementById('q-score-label').textContent = `Score: ${state.totalScore}`;
+
+  document.getElementById('q-feedback').style.display='none';
+  document.getElementById('next-btn').style.display='inline-block';
+  document.getElementById('next-btn').textContent =
+    state.currentQ < questions.length-1 ? 'Next Question →' : 'See My Results →';
+}
+
+function nextQuestion(){
+  const questions = Q[state.currentAttempt];
+  if(state.currentQ < questions.length-1){
+    state.currentQ++;
+    renderQuestion();
+    document.getElementById('phase-questions').querySelector('.q-wrap').scrollTop=0;
+    window.scrollTo(0,0);
+  } else {
+    showResults();
+  }
+}
+
+// ─── LEARN CARDS ──────────────────────────────────────────
+let currentLearnCard = 0;
+function nextLearnCard(){
+  const cards = document.querySelectorAll('.learn-card');
+  if(currentLearnCard < cards.length-1){
+    cards[currentLearnCard].classList.remove('active');
+    currentLearnCard++;
+    cards[currentLearnCard].classList.add('active');
+    window.scrollTo(0,0);
+  }
+}
+
+// ─── RESULTS ──────────────────────────────────────────────
+function showResults(){
+  const pct = Math.round((state.totalScore/state.maxScore)*100);
+  const isPreview = new URLSearchParams(location.search).get('preview')==='true' || !!document.getElementById('founder-badge');
+  if(!isPreview){
+    const attemptsDone = parseInt(localStorage.getItem(LS.attempts)||'0') + 1;
+    localStorage.setItem(LS.attempts, attemptsDone.toString());
+    const scores = JSON.parse(localStorage.getItem(LS.scores)||'[]');
+    scores.push({attempt:state.currentAttempt, score:state.totalScore, pct, date:new Date().toISOString()});
+    localStorage.setItem(LS.scores, JSON.stringify(scores));
+  }
+
+  const tier = pct>=90?'Strategic Mastery':pct>=75?'Applied Proficiency':pct>=60?'Core Competency':'Foundational Understanding';
+  gtag('event','sim_completed',{sim:'CDO-SIM-1-AntGroup',attempt:state.currentAttempt,score_pct:pct,tier:tier});
+  const tierClass = pct>=90?'tier-mastery':pct>=75?'tier-proficiency':pct>=60?'tier-competency':'tier-foundational';
+  const tierFeedback = {
+    'Strategic Mastery':'Outstanding. You demonstrated the kind of nuanced, first-principles thinking that defines exceptional data leaders.',
+    'Applied Proficiency':'Strong performance. You understand the core frameworks and apply them well. Focus on the questions you missed to sharpen your edge.',
+    'Core Competency':'Good foundations. You got the basics right but there are gaps in some advanced areas. Review the feedback on your lowest-scoring answers.',
+    'Foundational Understanding':'A learning opportunity. The feedback on each question contains the mental models you need. Try Attempt 2 with fresh perspective.'
+  }[tier];
+
+  document.getElementById('results-heading').textContent = `Your Results — Attempt ${state.currentAttempt}`;
+  document.getElementById('result-pct').textContent = pct+'%';
+  document.getElementById('result-score-label').textContent = `${state.totalScore} / ${state.maxScore} pts`;
+
+  const badge = document.getElementById('tier-badge');
+  badge.textContent = tier;
+  badge.className = 'tier-badge '+tierClass;
+  document.getElementById('tier-feedback').textContent = tierFeedback;
+
+  drawScoreRing(pct);
+
+  // Breakdown with full feedback
+  const bd = document.getElementById('q-breakdown');
+  const questions = Q[state.currentAttempt];
+  bd.innerHTML = state.answers.map((a,i)=>{
+    const pctQ = Math.round((a.points/a.maxPts)*100);
+    const dotClass = pctQ>=80?'dot-high':pctQ>=50?'dot-mid':'dot-low';
+    const borderColor = pctQ>=80?'#059669':pctQ>=50?'#d97706':'#dc2626';
+    const chosen = questions[i].options[a.chosen];
+    return `<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div class="q-dot ${dotClass}"></div>
+        <span style="font-weight:600;font-size:.88em;flex:1;">Q${i+1}: ${questions[i].question}</span>
+        <span style="font-weight:700;font-size:.88em;color:${borderColor};">${a.points}/${a.maxPts}</span>
+      </div>
+      <div style="font-size:.82em;color:var(--muted);margin-bottom:8px;">Your answer: <em>${chosen.text}</em></div>
+      <div style="font-size:.85em;color:#374151;line-height:1.7;background:var(--light);border-left:3px solid ${borderColor};border-radius:0 6px 6px 0;padding:10px 14px;">${a.feedback}</div>
+    </div>`;
+  }).join('');
+
+  // Cumulative competency analysis
+  const compScores = state.answers.map((a,i)=>({
+    name: COMP_MAP[i]?COMP_MAP[i].name:`Competency ${i+1}`,
+    pct:  Math.round((a.points/a.maxPts)*100)
+  }));
+
+  document.getElementById('competency-bars').innerHTML = compScores.map(c=>{
+    const color = c.pct>=80?'#059669':c.pct>=50?'#d97706':'#dc2626';
+    return `<div class="comp-bar-row">
+      <div class="comp-label">${c.name}</div>
+      <div class="comp-track"><div class="comp-fill" style="width:${c.pct}%;background:${color};"></div></div>
+      <div class="comp-pct">${c.pct}%</div>
+    </div>`;
+  }).join('');
+
+  const sorted = [...compScores].sort((a,b)=>b.pct-a.pct);
+  const strengths = sorted.slice(0,2);
+  const gaps = sorted.slice(-2);
+
+  document.getElementById('strength-tags').innerHTML = strengths.map(s=>`<span class="strength-tag">${s.name}</span>`).join('');
+  document.getElementById('gap-tags').innerHTML = gaps.map(g=>`<span class="gap-tag">${g.name}</span>`).join('');
+
+  const insightText = pct>=90
+    ? `Outstanding across the board. Your ${strengths[0].name} and ${strengths[1].name} scores reflect the kind of first-principles thinking that defines exceptional data leaders. You consistently chose depth over speed, long-term over short-term, and principle over convenience.`
+    : pct>=75
+    ? `Strong CDO instincts. You excelled in ${strengths[0].name} and ${strengths[1].name}, showing real strategic and technical maturity. Your development areas — ${gaps[0].name} and ${gaps[1].name} — are exactly where the highest-impact CDOs differentiate themselves as they scale.`
+    : pct>=60
+    ? `Solid foundations with clear growth areas. You showed genuine competency in ${strengths[0].name} and ${strengths[1].name}, but the gaps in ${gaps[0].name} and ${gaps[1].name} reveal where your thinking can deepen. Review the expert feedback on your lowest-scoring answers — those mental models are what separates good from great at CDO level.`
+    : `This simulation is designed to challenge. Your instincts in ${strengths[0].name} showed promise. The gaps in ${gaps[0].name} and ${gaps[1].name} reveal where CDO-level thinking diverges most sharply from general data management. Use the feedback from this round to recalibrate — Attempt 2 gives you fresh scenarios to apply these lessons.`;
+
+  document.getElementById('insight-text').textContent = insightText;
+
+  // Show "next sim" banner and attempt 2 prompt
+  const isPreview2 = new URLSearchParams(location.search).get('preview')==='true' || !!document.getElementById('founder-badge');
+  if(isPreview2){
+    document.getElementById('attempt2-prompt').style.display='block';
+    document.getElementById('next-sim-banner').style.display='none';
+  } else if(state.currentAttempt===1){
+    document.getElementById('attempt2-prompt').style.display='block';
+    document.getElementById('next-sim-banner').style.display='none';
+  } else {
+    document.getElementById('attempt2-prompt').style.display='none';
+    document.getElementById('next-sim-banner').style.display='flex';
+  }
+
+  drawCertificate(pct, tier);
+  drawBadge(pct, tier);
+  showPhase('results');
+}
+
+function startAttempt2(){
+  state.currentAttempt = 2;
+  currentLearnCard = 0;
+  const cards = document.querySelectorAll('.learn-card');
+  cards.forEach((c,i)=>{c.classList.toggle('active',i===0);});
+  showPhase('intro');
+  document.getElementById('attempt-badge-display').textContent = '🎯 Attempt 2 of 2';
+}
+
+// ─── SCORE RING ───────────────────────────────────────────
+function drawScoreRing(pct){
+  const canvas = document.getElementById('scoreRingCanvas');
+  const ctx = canvas.getContext('2d');
+  const cx=80, cy=80, r=65, lw=12;
+  ctx.clearRect(0,0,160,160);
+  ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+  ctx.strokeStyle='#e5e7eb'; ctx.lineWidth=lw; ctx.stroke();
+  const angle = (pct/100)*Math.PI*2 - Math.PI/2;
+  ctx.beginPath(); ctx.arc(cx,cy,r,-Math.PI/2,angle);
+  ctx.strokeStyle = pct>=90?'#16a34a':pct>=75?'#2563eb':pct>=60?'#d97706':'#dc2626';
+  ctx.lineWidth=lw; ctx.lineCap='round'; ctx.stroke();
+}
+
+// ─── CERTIFICATE ──────────────────────────────────────────
+function drawCertificate(pct, tier){
+  const canvas = document.getElementById('certCanvas');
+  const ctx = canvas.getContext('2d');
+  const W=1200, H=850;
+  canvas.width=W; canvas.height=H;
+  ctx.clearRect(0,0,W,H);
+  const CX=W/2;
+  const gold='#c9a84c';
+
+  // Dark gradient background
+  const bg=ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#0c1221'); bg.addColorStop(0.5,'#131b2e'); bg.addColorStop(1,'#1a1a2e');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+
+  // Subtle dot grid
+  ctx.fillStyle='rgba(255,255,255,0.018)';
+  for(let x=0;x<W;x+=40)for(let y=0;y<H;y+=40){ctx.beginPath();ctx.arc(x,y,1.2,0,Math.PI*2);ctx.fill();}
+
+  // Gold accent bar at top
+  const topGrad=ctx.createLinearGradient(0,0,W,0);
+  topGrad.addColorStop(0,'#c9a84c'); topGrad.addColorStop(0.5,'#e8d48b'); topGrad.addColorStop(1,'#c9a84c');
+  ctx.fillStyle=topGrad; ctx.fillRect(0,0,W,5);
+
+  // Border frame
+  ctx.strokeStyle='rgba(201,168,76,0.25)'; ctx.lineWidth=1;
+  ctx.strokeRect(24,24,W-48,H-48);
+
+  // Corner ornaments
+  [[26,26,1,1],[W-26,26,-1,1],[26,H-26,1,-1],[W-26,H-26,-1,-1]].forEach(([x,y,sx,sy])=>{
+    ctx.strokeStyle='rgba(201,168,76,0.4)'; ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sx*32,y);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+sy*32);ctx.stroke();
+  });
+
+  // HEADER — Logo + Track
+  ctx.textAlign='left';
+  ctx.font='bold 26px Inter, Arial, sans-serif';
+  const cxoW=ctx.measureText('CXO').width;
+  const slW=ctx.measureText(' Simulabs').width;
+  const logoX=CX-(cxoW+slW)/2;
+  ctx.fillStyle='#ffffff'; ctx.fillText('CXO',logoX,72);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',logoX+cxoW,72);
+
+  ctx.textAlign='center';
+  ctx.font='600 11px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='3px';
+  ctx.fillText('CDO TRACK  ·  SIMULATION 1',CX,98);
+  ctx.letterSpacing='0';
+
+  // Gold divider with diamond
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(CX-110,116);ctx.lineTo(CX+110,116);ctx.stroke();
+  ctx.fillStyle=gold;
+  ctx.beginPath();ctx.moveTo(CX,112);ctx.lineTo(CX+4,116);ctx.lineTo(CX,120);ctx.lineTo(CX-4,116);ctx.closePath();ctx.fill();
+
+  // TITLE
+  ctx.letterSpacing='6px';
+  ctx.font='600 13px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold;
+  ctx.fillText('SIMULATION COMPLETION RECORD',CX,152);
+  ctx.letterSpacing='0';
+
+  // NAME
+  ctx.font='italic 15px Georgia, serif';
+  ctx.fillStyle='rgba(255,255,255,0.4)';
+  ctx.fillText('This certifies that',CX,200);
+
+  const name=state.name||state.email;
+  ctx.font='bold 52px Georgia, "Times New Roman", serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(name,CX,260);
+
+  // Gold fading underline
+  const nw=Math.min(ctx.measureText(name).width+60,W-200);
+  const ulGrad=ctx.createLinearGradient(CX-nw/2,0,CX+nw/2,0);
+  ulGrad.addColorStop(0,'rgba(201,168,76,0)'); ulGrad.addColorStop(0.3,'rgba(201,168,76,0.45)');
+  ulGrad.addColorStop(0.5,'rgba(201,168,76,0.65)'); ulGrad.addColorStop(0.7,'rgba(201,168,76,0.45)');
+  ulGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=ulGrad; ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.moveTo(CX-nw/2,275);ctx.lineTo(CX+nw/2,275);ctx.stroke();
+
+  // ACHIEVEMENT — Competency HERO, company secondary
+  ctx.font='italic 14px Georgia, serif';
+  ctx.fillStyle='rgba(255,255,255,0.38)';
+  ctx.fillText('has completed a learning simulation exploring',CX,316);
+
+  // COMPETENCY = THE HERO
+  ctx.font='bold 28px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText('Data & AI Strategy',CX,358);
+
+  // Company = secondary context
+  ctx.font='15px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.35)';
+  ctx.fillText('through the Ant Group case simulation',CX,390);
+
+  // METRICS — Score / Tier / Date
+  const divGrad1=ctx.createLinearGradient(100,0,W-100,0);
+  divGrad1.addColorStop(0,'rgba(201,168,76,0)'); divGrad1.addColorStop(0.2,'rgba(201,168,76,0.2)');
+  divGrad1.addColorStop(0.5,'rgba(201,168,76,0.3)'); divGrad1.addColorStop(0.8,'rgba(201,168,76,0.2)');
+  divGrad1.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=divGrad1; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(100,420);ctx.lineTo(W-100,420);ctx.stroke();
+
+  const metricsY=488;
+  const colL=240, colC=CX, colR=W-240;
+  const ringColor=pct>=90?'#4ade80':pct>=75?'#60a5fa':pct>=60?'#fbbf24':'#f87171';
+
+  // SCORE (left) with ring
+  const ringR=58, ringLw=8;
+  ctx.beginPath();ctx.arc(colL,metricsY,ringR,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=ringLw; ctx.stroke();
+  const angle=(pct/100)*Math.PI*2-Math.PI/2;
+  ctx.beginPath();ctx.arc(colL,metricsY,ringR,-Math.PI/2,angle);
+  ctx.strokeStyle=ringColor; ctx.lineWidth=ringLw; ctx.lineCap='round'; ctx.stroke();
+  ctx.lineCap='butt';
+  ctx.font='bold 44px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(pct+'%',colL,metricsY+14);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('SCORE',colL,metricsY+38);
+  ctx.letterSpacing='0';
+
+  // TIER (center)
+  ctx.font='bold 26px Inter, Arial, sans-serif';
+  ctx.fillStyle=ringColor;
+  ctx.fillText(tier,colC,metricsY+8);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('PERFORMANCE TIER',colC,metricsY+32);
+  ctx.letterSpacing='0';
+
+  // DATE (right)
+  const d=new Date();
+  const dateStr=d.toLocaleString('default',{month:'long'})+' '+d.getDate()+', '+d.getFullYear();
+  ctx.font='bold 20px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(dateStr,colR,metricsY+8);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('DATE ISSUED',colR,metricsY+32);
+  ctx.letterSpacing='0';
+
+  // Vertical separators
+  ctx.strokeStyle='rgba(201,168,76,0.15)'; ctx.lineWidth=0.8;
+  const sepTop=metricsY-52, sepBot=metricsY+48;
+  ctx.beginPath();ctx.moveTo((colL+colC)/2,sepTop);ctx.lineTo((colL+colC)/2,sepBot);ctx.stroke();
+  ctx.beginPath();ctx.moveTo((colC+colR)/2,sepTop);ctx.lineTo((colC+colR)/2,sepBot);ctx.stroke();
+
+  // Horizontal divider below metrics
+  ctx.strokeStyle=divGrad1; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(100,556);ctx.lineTo(W-100,556);ctx.stroke();
+
+  // COMPETENCIES ASSESSED
+  ctx.letterSpacing='2.5px';
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold;
+  ctx.fillText('COMPETENCIES ASSESSED',CX,586);
+  ctx.letterSpacing='0';
+
+  const comps=COMP_MAP.map(c=>c.name);
+  ctx.font='11.5px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.45)';
+  const compStartX=160, compSpacing=220;
+  comps.slice(0,5).forEach((c,i)=>{ctx.fillText(c,compStartX+i*compSpacing,614);});
+  comps.slice(5,10).forEach((c,i)=>{ctx.fillText(c,compStartX+i*compSpacing,640);});
+
+  // FOOTER
+  const sealX=W-90, sealY=H-85, sealR=32;
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle='rgba(201,168,76,0.12)'; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR-6,0,Math.PI*2);ctx.stroke();
+  ctx.fillStyle='rgba(201,168,76,0.04)';
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR,0,Math.PI*2);ctx.fill();
+  ctx.font='bold 7px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='1.5px';
+  ctx.fillText('COMPLETED',sealX,sealY-6);
+  ctx.letterSpacing='0';
+  ctx.font='bold 18px Arial';
+  ctx.fillStyle=gold;
+  ctx.fillText('✓',sealX,sealY+10);
+
+  const footGrad=ctx.createLinearGradient(50,0,W-50,0);
+  footGrad.addColorStop(0,'rgba(201,168,76,0)'); footGrad.addColorStop(0.3,'rgba(201,168,76,0.2)');
+  footGrad.addColorStop(0.5,'rgba(201,168,76,0.3)'); footGrad.addColorStop(0.7,'rgba(201,168,76,0.2)');
+  footGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=footGrad; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(50,H-55);ctx.lineTo(W-50,H-55);ctx.stroke();
+
+  ctx.textAlign='left';
+  ctx.font='12px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.fillText('© 2026 CXO Simulabs  ·  Not a professional certification  ·  Not affiliated with Ant Group Co., Ltd.',55,H-32);
+  ctx.textAlign='right';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.font='bold 11px Inter, Arial, sans-serif';
+  ctx.fillText('www.cxosimulabs.com',W-55,H-32);
+}
+
+// ─── INSTAGRAM BADGE ──────────────────────────────────────
+function drawBadge(pct, tier){
+  const canvas=document.getElementById('badgeCanvas');
+  const ctx=canvas.getContext('2d');
+  const S=1080;
+  ctx.clearRect(0,0,S,S);
+  const C=S/2;
+  const gold='#c9a84c';
+
+  // Dark gradient background
+  const bg=ctx.createLinearGradient(0,0,S,S);
+  bg.addColorStop(0,'#0c1221'); bg.addColorStop(0.5,'#131b2e'); bg.addColorStop(1,'#1a1a2e');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,S,S);
+
+  // Subtle dot grid
+  ctx.fillStyle='rgba(255,255,255,0.018)';
+  for(let x=0;x<S;x+=44)for(let y=0;y<S;y+=44){ctx.beginPath();ctx.arc(x,y,1.2,0,Math.PI*2);ctx.fill();}
+
+  // Gold bar top
+  const topGrad=ctx.createLinearGradient(0,0,S,0);
+  topGrad.addColorStop(0,'#c9a84c'); topGrad.addColorStop(0.5,'#e8d48b'); topGrad.addColorStop(1,'#c9a84c');
+  ctx.fillStyle=topGrad; ctx.fillRect(0,0,S,6);
+
+  // Border + corners
+  ctx.strokeStyle='rgba(201,168,76,0.25)'; ctx.lineWidth=1;
+  ctx.strokeRect(24,24,S-48,S-48);
+  [[26,26,1,1],[S-26,26,-1,1],[26,S-26,1,-1],[S-26,S-26,-1,-1]].forEach(([x,y,sx,sy])=>{
+    ctx.strokeStyle='rgba(201,168,76,0.4)'; ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sx*28,y);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+sy*28);ctx.stroke();
+  });
+
+  // Logo
+  ctx.textAlign='left';
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  const cW=ctx.measureText('CXO').width;
+  const sW=ctx.measureText(' Simulabs').width;
+  const lStart=C-(cW+sW)/2;
+  ctx.fillStyle='#ffffff'; ctx.fillText('CXO',lStart,82);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',lStart+cW,82);
+
+  // Track label
+  ctx.textAlign='center';
+  ctx.font='600 13px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='3px';
+  ctx.fillText('CDO TRACK  ·  SIMULATION 1',C,114);
+  ctx.letterSpacing='0';
+
+  // Gold divider
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(C-100,134);ctx.lineTo(C+100,134);ctx.stroke();
+  ctx.fillStyle=gold;
+  ctx.beginPath();ctx.moveTo(C,130);ctx.lineTo(C+4,134);ctx.lineTo(C,138);ctx.lineTo(C-4,134);ctx.closePath();ctx.fill();
+
+  // Competency HERO
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText('Data & AI',C,186);
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.fillText('Strategy',C,228);
+
+  // Company context
+  ctx.font='16px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)';
+  ctx.fillText('Ant Group case simulation',C,262);
+
+  // Name
+  const name=state.name||state.email;
+  ctx.font='bold 40px Georgia, "Times New Roman", serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(name,C,320);
+  const nw2=Math.min(ctx.measureText(name).width+40,S-120);
+  const ulGrad=ctx.createLinearGradient(C-nw2/2,0,C+nw2/2,0);
+  ulGrad.addColorStop(0,'rgba(201,168,76,0)'); ulGrad.addColorStop(0.3,'rgba(201,168,76,0.4)');
+  ulGrad.addColorStop(0.5,'rgba(201,168,76,0.55)'); ulGrad.addColorStop(0.7,'rgba(201,168,76,0.4)');
+  ulGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=ulGrad; ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(C-nw2/2,334);ctx.lineTo(C+nw2/2,334);ctx.stroke();
+
+  // Score ring
+  const ringCY=560, r=170, lw=22;
+  ctx.beginPath();ctx.arc(C,ringCY,r,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=lw; ctx.stroke();
+  const angle=(pct/100)*Math.PI*2-Math.PI/2;
+  const ringColor=pct>=90?'#4ade80':pct>=75?'#60a5fa':pct>=60?'#fbbf24':'#f87171';
+  ctx.beginPath();ctx.arc(C,ringCY,r,-Math.PI/2,angle);
+  ctx.strokeStyle=ringColor; ctx.lineWidth=lw; ctx.lineCap='round'; ctx.stroke();
+  ctx.lineCap='butt';
+
+  // Score text
+  ctx.font='bold 120px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(pct+'%',C,ringCY+40);
+
+  // Tier
+  ctx.font='bold 30px Inter, Arial, sans-serif';
+  ctx.fillStyle=ringColor;
+  ctx.fillText(tier,C,ringCY+88);
+
+  // Footer
+  const fDivGrad=ctx.createLinearGradient(40,0,S-40,0);
+  fDivGrad.addColorStop(0,'rgba(201,168,76,0)'); fDivGrad.addColorStop(0.3,'rgba(201,168,76,0.2)');
+  fDivGrad.addColorStop(0.5,'rgba(201,168,76,0.3)'); fDivGrad.addColorStop(0.7,'rgba(201,168,76,0.2)');
+  fDivGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=fDivGrad; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(40,S-100);ctx.lineTo(S-40,S-100);ctx.stroke();
+
+  // Seal
+  const sealX=S-90, sealY=S-58;
+  ctx.strokeStyle='rgba(201,168,76,0.28)'; ctx.lineWidth=1;
+  ctx.beginPath();ctx.arc(sealX,sealY,22,0,Math.PI*2);ctx.stroke();
+  ctx.font='bold 14px Arial'; ctx.fillStyle=gold;
+  ctx.fillText('✓',sealX,sealY+5);
+
+  ctx.font='bold 22px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.45)';
+  ctx.fillText('www.cxosimulabs.com',C,S-52);
+
+  ctx.font='14px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.2)';
+  ctx.fillText('Try the free simulation →',C,S-28);
+}
+
+function getPctTier(){
+  return {
+    pct: parseInt(document.getElementById('result-pct').textContent),
+    tier: document.getElementById('tier-badge').textContent
+  };
+}
+function downloadCert(){
+  const {pct,tier}=getPctTier();
+  gtag('event','cert_downloaded',{sim:'CDO-SIM-1-AntGroup',score_pct:pct,tier:tier});
+  const canvas=document.getElementById('certCanvas');
+  canvas.width=1200; canvas.height=850;
+  drawCertificate(pct,tier);
+  const link=document.createElement('a');
+  link.download=`CXO-Simulabs-Certificate-${(state.name||'').replace(/\s/g,'-')}.png`;
+  link.href=canvas.toDataURL('image/png'); link.click();
+}
+function downloadBadge(){
+  const {pct,tier}=getPctTier();
+  gtag('event','badge_downloaded',{sim:'CDO-SIM-1-AntGroup',score_pct:pct,tier:tier});
+  const canvas=document.getElementById('badgeCanvas');
+  drawBadge(pct,tier);
+  const link=document.createElement('a');
+  link.download=`CXO-Simulabs-Badge-${(state.name||'').replace(/\s/g,'-')}.png`;
+  link.href=canvas.toDataURL('image/png'); link.click();
+}
+function shareLinkedIn(){
+  gtag('event','share_linkedin',{sim:'CDO-SIM-1-AntGroup'});
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`I just scored ${pct}% (${tier}) on the Ant Group Data & AI Strategy Simulation by CXO Simulabs — 10 real data strategy decisions, expert feedback.\n\nTry it free: https://cxosimulabs.com\n\n#DataStrategy #CDO #CXOSimulabs #AI`);
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcxosimulabs.com&summary=${text}`,'_blank');
+}
+function shareTwitter(){
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`Just scored ${pct}% (${tier}) on the Ant Group Data & AI Strategy Simulation by @CXOSimulabs — 10 real data strategy decisions, expert feedback. Try it free 👇\nhttps://cxosimulabs.com\n#CDO #DataStrategy #AI`);
+  window.open(`https://twitter.com/intent/tweet?text=${text}`,'_blank');
+}
+function shareWhatsApp(){
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`I scored ${pct}% (${tier}) on the Ant Group Data & AI Strategy Simulation by CXO Simulabs — 10 real data strategy decisions with expert feedback. Try it free: https://cxosimulabs.com`);
+  window.open(`https://wa.me/?text=${text}`,'_blank');
+}
+function copyLink(){
+  navigator.clipboard.writeText('https://cxosimulabs.com').then(()=>{
+    const btn=document.getElementById('copy-link-btn');
+    btn.textContent='✓ Copied!';
+    setTimeout(()=>btn.textContent='Copy Link',2000);
+  });
+}
+</script>
+</body>
+</html>
